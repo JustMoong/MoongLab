@@ -1,0 +1,4035 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>MoongLab</title>
+    <meta name="referrer" content="same-origin" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,shrink-to-fit=no"
+    />
+    <link
+      rel="preload"
+      href="css/Inter-VariableFont_slnt,wght.woff2"
+      as="font"
+      crossorigin
+    />
+    <style>
+      html,
+      body {
+        -webkit-text-zoom: reset !important;
+      }
+      @font-face {
+        font-display: block;
+        font-family: "Inter 3";
+        src: url("css/Inter-VariableFont_slnt,wght.woff2") format("woff2"),
+          url("css/Inter-VariableFont_slnt,wght.woff") format("woff");
+        font-weight: 400;
+        font-style: normal;
+      }
+      @font-face {
+        font-display: block;
+        font-family: "Inter 6";
+        src: url("css/Inter-VariableFont_slnt,wght.woff2") format("woff2"),
+          url("css/Inter-VariableFont_slnt,wght.woff") format("woff");
+        font-weight: 700;
+        font-style: normal;
+      }
+      body > div {
+        font-size: 0;
+      }
+      p,
+      span,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      a,
+      li {
+        margin: 0;
+        word-spacing: normal;
+        word-wrap: break-word;
+        -ms-word-wrap: break-word;
+        pointer-events: auto;
+        -ms-text-size-adjust: none !important;
+        -moz-text-size-adjust: none !important;
+        -webkit-text-size-adjust: none !important;
+        text-size-adjust: none !important;
+        max-height: 10000000px;
+      }
+      sup {
+        font-size: inherit;
+        vertical-align: baseline;
+        position: relative;
+        top: -0.4em;
+      }
+      sub {
+        font-size: inherit;
+        vertical-align: baseline;
+        position: relative;
+        top: 0.4em;
+      }
+      ul {
+        display: block;
+        word-spacing: normal;
+        word-wrap: break-word;
+        line-break: normal;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        -moz-padding-start: 0;
+        -khtml-padding-start: 0;
+        -webkit-padding-start: 0;
+        -o-padding-start: 0;
+        -padding-start: 0;
+        -webkit-margin-before: 0;
+        -webkit-margin-after: 0;
+      }
+      li {
+        display: block;
+        white-space: normal;
+      }
+      [data-marker]::before {
+        content: attr(data-marker) " ";
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+      }
+      li p {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+      }
+      form {
+        display: inline-block;
+      }
+      a {
+        text-decoration: inherit;
+        color: inherit;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      }
+      textarea {
+        resize: none;
+      }
+      .shm-l {
+        float: left;
+        clear: left;
+      }
+      .shm-r {
+        float: right;
+        clear: right;
+      }
+      .btf {
+        display: none;
+      }
+      .plyr {
+        min-width: 0 !important;
+      }
+      html {
+        font-family: sans-serif;
+      }
+      body {
+        font-size: 0;
+        margin: 0;
+        --z: 1;
+        zoom: var(--z);
+      }
+      audio,
+      video {
+        display: inline-block;
+        vertical-align: baseline;
+      }
+      audio:not([controls]) {
+        display: none;
+        height: 0;
+      }
+      [hidden],
+      template {
+        display: none;
+      }
+      a {
+        background: 0 0;
+        outline: 0;
+      }
+      b,
+      strong {
+        font-weight: 700;
+      }
+      dfn {
+        font-style: italic;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-size: 1em;
+        line-height: 1;
+        margin: 0;
+      }
+      img {
+        border: 0;
+      }
+      svg:not(:root) {
+        overflow: hidden;
+      }
+      button,
+      input,
+      optgroup,
+      select,
+      textarea {
+        color: inherit;
+        font: inherit;
+        margin: 0;
+      }
+      button {
+        overflow: visible;
+      }
+      button,
+      select {
+        text-transform: none;
+      }
+      button,
+      html input[type="button"],
+      input[type="submit"] {
+        -webkit-appearance: button;
+        cursor: pointer;
+        box-sizing: border-box;
+        white-space: normal;
+      }
+      input[type="date"],
+      input[type="email"],
+      input[type="number"],
+      input[type="password"],
+      input[type="text"],
+      textarea {
+        -webkit-appearance: none;
+        appearance: none;
+        box-sizing: border-box;
+      }
+      button[disabled],
+      html input[disabled] {
+        cursor: default;
+      }
+      button::-moz-focus-inner,
+      input::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+      }
+      input {
+        line-height: normal;
+      }
+      input[type="checkbox"],
+      input[type="radio"] {
+        box-sizing: border-box;
+        padding: 0;
+      }
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button {
+        height: auto;
+      }
+      input[type="search"] {
+        -webkit-appearance: textfield;
+        -moz-box-sizing: content-box;
+        -webkit-box-sizing: content-box;
+        box-sizing: content-box;
+      }
+      input[type="search"]::-webkit-search-cancel-button,
+      input[type="search"]::-webkit-search-decoration {
+        -webkit-appearance: none;
+      }
+      textarea {
+        overflow: auto;
+        box-sizing: border-box;
+        border-color: #ddd;
+      }
+      optgroup {
+        font-weight: 700;
+      }
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+      td,
+      th {
+        padding: 0;
+      }
+      blockquote {
+        margin-block-start: 0;
+        margin-block-end: 0;
+        margin-inline-start: 0;
+        margin-inline-end: 0;
+      }
+      :-webkit-full-screen-ancestor:not(iframe) {
+        -webkit-clip-path: initial !important;
+      }
+      html {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      #b {
+        background-color: #fff;
+      }
+      .ps1 {
+        position: relative;
+        margin-top: 0;
+      }
+      .v1 {
+        display: block;
+        vertical-align: top;
+      }
+      .s1 {
+        width: 1920px;
+        margin-left: auto;
+        margin-right: auto;
+        min-height: 8001px;
+      }
+      .z1 {
+        pointer-events: none;
+      }
+      .v2 {
+        display: inline-block;
+        vertical-align: top;
+      }
+      .ps2 {
+        position: relative;
+        margin-left: -1px;
+        margin-top: 0;
+      }
+      .s2 {
+        min-width: 1921px;
+        width: 1921px;
+        min-height: 8001px;
+      }
+      .ps3 {
+        position: relative;
+        margin-left: 0;
+        margin-top: 0;
+      }
+      .s3 {
+        min-width: 1921px;
+        width: 1921px;
+        min-height: 8001px;
+        line-height: 0;
+      }
+      .s4 {
+        min-width: 1921px;
+        width: 1921px;
+        min-height: 8001px;
+      }
+      .c2 {
+        border: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        background-color: #fff;
+      }
+      .z2 {
+        z-index: 2;
+      }
+      .ps4 {
+        position: relative;
+        margin-left: 1px;
+        margin-top: 0;
+      }
+      .s5 {
+        min-width: 1920px;
+        width: 1920px;
+        min-height: 125px;
+      }
+      .z3 {
+        z-index: 3;
+      }
+      .z4 {
+        z-index: 4;
+      }
+      .ps5 {
+        position: relative;
+        margin-left: 422px;
+        margin-top: 19px;
+      }
+      .s6 {
+        min-width: 1080px;
+        width: 1080px;
+        min-height: 87px;
+      }
+      .s7 {
+        min-width: 65px;
+        width: 65px;
+        min-height: 87px;
+      }
+      .z5 {
+        z-index: 5;
+      }
+      .s8 {
+        min-width: 65px;
+        width: 65px;
+        min-height: 65px;
+        height: 65px;
+      }
+      .z6 {
+        pointer-events: auto;
+      }
+      .i1 {
+        position: absolute;
+        left: 0;
+        width: 65px;
+        height: 65px;
+        top: 0;
+        border: 0;
+      }
+      .ps6 {
+        position: relative;
+        margin-left: 0;
+        margin-top: 4px;
+      }
+      .s9 {
+        min-width: 64px;
+        width: 64px;
+        overflow: hidden;
+        height: 18px;
+      }
+      .p1 {
+        text-indent: 0;
+        padding-bottom: 0;
+        padding-right: 0;
+        text-align: center;
+      }
+      .f1 {
+        font-family: "Inter 3";
+        font-size: 14px;
+        font-size: calc(14px * var(--f));
+        line-height: 1.215;
+        font-weight: 400;
+        font-style: normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        color: #000;
+        background-color: initial;
+        text-shadow: none;
+      }
+      .ps7 {
+        position: relative;
+        margin-left: 137px;
+        margin-top: 0;
+      }
+      .z7 {
+        z-index: 8;
+      }
+      .ps8 {
+        position: relative;
+        margin-left: 19px;
+        margin-top: 4px;
+      }
+      .s10 {
+        min-width: 26px;
+        width: 26px;
+        overflow: hidden;
+        height: 18px;
+      }
+      .ps9 {
+        position: relative;
+        margin-left: 137px;
+        margin-top: 0;
+      }
+      .z8 {
+        z-index: 11;
+      }
+      .ps10 {
+        position: relative;
+        margin-left: 9px;
+        margin-top: 4px;
+      }
+      .s11 {
+        min-width: 48px;
+        width: 48px;
+        overflow: hidden;
+        height: 18px;
+      }
+      .ps11 {
+        position: relative;
+        margin-left: 135px;
+        margin-top: 0;
+      }
+      .z9 {
+        z-index: 14;
+      }
+      .ps12 {
+        position: relative;
+        margin-left: 4px;
+        margin-top: 4px;
+      }
+      .s12 {
+        min-width: 55px;
+        width: 55px;
+        overflow: hidden;
+        height: 18px;
+      }
+      .ps13 {
+        position: relative;
+        margin-left: 137px;
+        margin-top: 1px;
+      }
+      .s13 {
+        min-width: 72px;
+        width: 72px;
+        min-height: 84px;
+      }
+      .z10 {
+        z-index: 17;
+      }
+      .ps14 {
+        position: relative;
+        margin-left: 4px;
+        margin-top: 0;
+      }
+      .ps15 {
+        position: relative;
+        margin-left: 0;
+        margin-top: 1px;
+      }
+      .s14 {
+        min-width: 72px;
+        width: 72px;
+        overflow: hidden;
+        height: 18px;
+      }
+      .ps16 {
+        position: relative;
+        margin-left: 137px;
+        margin-top: 0;
+      }
+      .z11 {
+        z-index: 20;
+      }
+      .ps17 {
+        position: relative;
+        margin-left: 15px;
+        margin-top: 4px;
+      }
+      .s15 {
+        min-width: 35px;
+        width: 35px;
+        overflow: hidden;
+        height: 18px;
+      }
+      .ps18 {
+        position: relative;
+        margin-left: 421px;
+        margin-top: 19px;
+      }
+      .s16 {
+        min-width: 1081px;
+        width: 1081px;
+        min-height: 53px;
+      }
+      .s17 {
+        min-width: 215px;
+        width: 215px;
+        overflow: hidden;
+        height: 45px;
+      }
+      .z12 {
+        z-index: 23;
+        pointer-events: auto;
+      }
+      .f2 {
+        font-family: "Inter 6";
+        font-size: 36px;
+        font-size: calc(36px * var(--f));
+        line-height: 1.223;
+        font-weight: 700;
+        font-style: normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        color: #000;
+        background-color: initial;
+        text-shadow: none;
+      }
+      .ps19 {
+        position: relative;
+        margin-left: 629px;
+        margin-top: 0;
+      }
+      .s18 {
+        min-width: 53px;
+        width: 53px;
+        min-height: 53px;
+        height: 53px;
+      }
+      .z13 {
+        z-index: 24;
+        pointer-events: auto;
+      }
+      .i2 {
+        position: absolute;
+        left: 0;
+        min-width: 53px;
+        max-width: 53px;
+        min-height: 53px;
+        max-height: 53px;
+        top: 0;
+      }
+      .ps20 {
+        position: relative;
+        margin-left: 39px;
+        margin-top: 0;
+      }
+      .z14 {
+        z-index: 25;
+        pointer-events: auto;
+      }
+      .ps21 {
+        position: relative;
+        margin-left: 39px;
+        margin-top: 0;
+      }
+      .z15 {
+        z-index: 26;
+        pointer-events: auto;
+      }
+      .ps22 {
+        position: relative;
+        margin-left: 522px;
+        margin-top: 126px;
+      }
+      .s19 {
+        min-width: 877px;
+        width: 877px;
+        overflow: hidden;
+        height: 119px;
+      }
+      .z16 {
+        z-index: 27;
+        pointer-events: auto;
+      }
+      .f3 {
+        font-family: "Inter 6";
+        font-size: 48px;
+        font-size: calc(48px * var(--f));
+        line-height: 1.23;
+        font-weight: 700;
+        font-style: normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        color: #000;
+        background-color: initial;
+        text-shadow: none;
+      }
+      .ps23 {
+        position: relative;
+        margin-left: 620px;
+        margin-top: 0;
+      }
+      .s20 {
+        min-width: 680px;
+        width: 680px;
+        overflow: hidden;
+        height: 105px;
+      }
+      .z17 {
+        z-index: 28;
+        pointer-events: auto;
+      }
+      .ps24 {
+        position: relative;
+        margin-left: 421px;
+        margin-top: 59px;
+      }
+      .s21 {
+        min-width: 1081px;
+        width: 1081px;
+        min-height: 687px;
+        height: 687px;
+      }
+      .z18 {
+        z-index: 29;
+        pointer-events: auto;
+      }
+      .i3 {
+        position: absolute;
+        left: 0;
+        width: 1081px;
+        height: 687px;
+        top: 0;
+        border: 0;
+      }
+      .ps25 {
+        position: relative;
+        margin-left: 421px;
+        margin-top: 199px;
+      }
+      .s22 {
+        min-width: 1081px;
+        width: 1081px;
+        min-height: 901px;
+      }
+      .s23 {
+        min-width: 1081px;
+        width: 1081px;
+        min-height: 901px;
+        line-height: 0;
+      }
+      .s24 {
+        min-width: 1081px;
+        width: 1081px;
+        min-height: 901px;
+        height: 901px;
+      }
+      .z19 {
+        z-index: 30;
+        pointer-events: auto;
+      }
+      .i4 {
+        position: absolute;
+        left: 0;
+        width: 1081px;
+        height: 901px;
+        top: 0;
+        border: 0;
+      }
+      .ps26 {
+        position: relative;
+        margin-left: 32px;
+        margin-top: -873px;
+      }
+      .s25 {
+        min-width: 358px;
+        width: 358px;
+        overflow: hidden;
+        height: 178px;
+      }
+      .z20 {
+        z-index: 31;
+        pointer-events: auto;
+      }
+      .p2 {
+        text-indent: 0;
+        padding-bottom: 0;
+        padding-right: 0;
+        text-align: left;
+      }
+      .f4 {
+        font-family: "Inter 6";
+        font-size: 48px;
+        font-size: calc(48px * var(--f));
+        line-height: 1.23;
+        font-weight: 700;
+        font-style: normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        color: #fff;
+        background-color: initial;
+        text-shadow: none;
+      }
+      .ps27 {
+        position: relative;
+        margin-left: -358px;
+        margin-top: -697px;
+      }
+      .s26 {
+        min-width: 420px;
+        width: 420px;
+        overflow: hidden;
+        height: 233px;
+      }
+      .z21 {
+        z-index: 32;
+        pointer-events: auto;
+      }
+      .f5 {
+        font-family: "Inter 3";
+        font-size: 24px;
+        font-size: calc(24px * var(--f));
+        line-height: 1.209;
+        font-weight: 400;
+        font-style: normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        color: #fff;
+        background-color: initial;
+        text-shadow: none;
+      }
+      .ps28 {
+        position: relative;
+        margin-left: 421px;
+        margin-top: 199px;
+      }
+      .s27 {
+        min-width: 1081px;
+        width: 1081px;
+        min-height: 468px;
+        height: 468px;
+      }
+      .z22 {
+        z-index: 33;
+        pointer-events: auto;
+      }
+      .i5 {
+        position: absolute;
+        left: 0;
+        width: 1081px;
+        height: 468px;
+        top: 0;
+        border: 0;
+      }
+      .ps29 {
+        position: relative;
+        margin-left: 728px;
+        margin-top: 59px;
+      }
+      .s28 {
+        min-width: 467px;
+        width: 467px;
+        overflow: hidden;
+        height: 107px;
+      }
+      .z23 {
+        z-index: 34;
+        pointer-events: auto;
+      }
+      .f6 {
+        font-family: "Inter 6";
+        font-size: 64px;
+        font-size: calc(64px * var(--f));
+        line-height: 1.204;
+        font-weight: 700;
+        font-style: normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        color: #000;
+        background-color: initial;
+        text-shadow: none;
+      }
+      .ps30 {
+        position: relative;
+        margin-left: -444px;
+        margin-top: 166px;
+      }
+      .z24 {
+        z-index: 35;
+        pointer-events: auto;
+      }
+      .f7 {
+        font-family: "Inter 3";
+        font-size: 24px;
+        font-size: calc(24px * var(--f));
+        line-height: 1.209;
+        font-weight: 400;
+        font-style: normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        color: #000;
+        background-color: initial;
+        text-shadow: none;
+      }
+      .ps31 {
+        position: relative;
+        margin-left: 421px;
+        margin-top: 119px;
+      }
+      .z25 {
+        z-index: 36;
+        pointer-events: auto;
+      }
+      .ps32 {
+        position: relative;
+        margin-left: 720px;
+        margin-top: 59px;
+      }
+      .s29 {
+        min-width: 481px;
+        width: 481px;
+        overflow: hidden;
+        height: 107px;
+      }
+      .z26 {
+        z-index: 37;
+        pointer-events: auto;
+      }
+      .ps33 {
+        position: relative;
+        margin-left: -450px;
+        margin-top: 166px;
+      }
+      .z27 {
+        z-index: 38;
+        pointer-events: auto;
+      }
+      .ps34 {
+        position: relative;
+        margin-left: 421px;
+        margin-top: 304px;
+      }
+      .z28 {
+        z-index: 39;
+        pointer-events: auto;
+      }
+      .ps35 {
+        position: relative;
+        margin-left: -724px;
+        margin-top: 831px;
+      }
+      .s30 {
+        min-width: 368px;
+        width: 368px;
+        overflow: hidden;
+        height: 107px;
+      }
+      .z29 {
+        z-index: 40;
+        pointer-events: auto;
+      }
+      .ps36 {
+        position: relative;
+        margin-left: -395px;
+        margin-top: 938px;
+      }
+      .z30 {
+        z-index: 41;
+        pointer-events: auto;
+      }
+      .ps37 {
+        position: relative;
+        margin-left: 421px;
+        margin-top: -2164px;
+      }
+      .s31 {
+        min-width: 1081px;
+        width: 1081px;
+        min-height: 2164px;
+        height: 2164px;
+      }
+      .z31 {
+        z-index: 42;
+        pointer-events: auto;
+      }
+      .i6 {
+        position: absolute;
+        left: 0;
+        min-width: 1080px;
+        max-width: 1080px;
+        min-height: 2164px;
+        max-height: 2164px;
+        top: 0;
+      }
+      body {
+        --d: 0;
+        --s: 1920;
+      }
+      @media (min-width: 1200px) and (max-width: 1919px) {
+        .s1 {
+          width: 1200px;
+          min-height: 5001px;
+        }
+        .s2 {
+          min-width: 1201px;
+          width: 1201px;
+          min-height: 5001px;
+        }
+        .s3 {
+          min-width: 1201px;
+          width: 1201px;
+          min-height: 5001px;
+        }
+        .s4 {
+          min-width: 1201px;
+          width: 1201px;
+          min-height: 5001px;
+        }
+        .s5 {
+          min-width: 1200px;
+          width: 1200px;
+          min-height: 78px;
+        }
+        .ps5 {
+          margin-left: 265px;
+          margin-top: 12px;
+        }
+        .s6 {
+          min-width: 675px;
+          width: 675px;
+          min-height: 54px;
+        }
+        .s7 {
+          min-width: 41px;
+          width: 41px;
+          min-height: 54px;
+        }
+        .s8 {
+          min-width: 41px;
+          width: 41px;
+          min-height: 41px;
+          height: 41px;
+        }
+        .i1 {
+          width: 41px;
+          height: 41px;
+        }
+        .ps6 {
+          margin-top: 2px;
+        }
+        .s9 {
+          min-width: 40px;
+          width: 40px;
+          height: 11px;
+        }
+        .f1 {
+          font-size: 8px;
+          font-size: calc(8px * var(--f));
+          line-height: 1.251;
+        }
+        .ps7 {
+          margin-left: 85px;
+        }
+        .ps8 {
+          margin-left: 12px;
+          margin-top: 2px;
+        }
+        .s10 {
+          min-width: 16px;
+          width: 16px;
+          height: 11px;
+        }
+        .ps9 {
+          margin-left: 85px;
+        }
+        .ps10 {
+          margin-left: 6px;
+          margin-top: 2px;
+        }
+        .s11 {
+          min-width: 30px;
+          width: 30px;
+          height: 11px;
+        }
+        .ps11 {
+          margin-left: 84px;
+        }
+        .ps12 {
+          margin-left: 2px;
+          margin-top: 2px;
+        }
+        .s12 {
+          min-width: 34px;
+          width: 34px;
+          height: 11px;
+        }
+        .ps13 {
+          margin-left: 85px;
+        }
+        .s13 {
+          min-width: 45px;
+          width: 45px;
+          min-height: 52px;
+        }
+        .ps14 {
+          margin-left: 2px;
+        }
+        .ps15 {
+          margin-top: 0;
+        }
+        .s14 {
+          min-width: 45px;
+          width: 45px;
+          height: 11px;
+        }
+        .ps16 {
+          margin-left: 86px;
+        }
+        .ps17 {
+          margin-left: 9px;
+          margin-top: 2px;
+        }
+        .s15 {
+          min-width: 22px;
+          width: 22px;
+          height: 11px;
+        }
+        .ps18 {
+          margin-left: 264px;
+          margin-top: 12px;
+        }
+        .s16 {
+          min-width: 675px;
+          width: 675px;
+          min-height: 33px;
+        }
+        .s17 {
+          min-width: 134px;
+          width: 134px;
+          height: 28px;
+        }
+        .f2 {
+          font-size: 22px;
+          font-size: calc(22px * var(--f));
+          line-height: 1.183;
+        }
+        .ps19 {
+          margin-left: 393px;
+        }
+        .s18 {
+          min-width: 33px;
+          width: 33px;
+          min-height: 33px;
+          height: 33px;
+        }
+        .i2 {
+          min-width: 33px;
+          max-width: 33px;
+          min-height: 33px;
+          max-height: 33px;
+        }
+        .ps20 {
+          margin-left: 25px;
+        }
+        .ps21 {
+          margin-left: 24px;
+        }
+        .ps22 {
+          margin-left: 327px;
+          margin-top: 79px;
+        }
+        .s19 {
+          min-width: 548px;
+          width: 548px;
+          height: 74px;
+        }
+        .f3 {
+          font-size: 30px;
+          font-size: calc(30px * var(--f));
+          line-height: 1.201;
+        }
+        .ps23 {
+          margin-left: 388px;
+        }
+        .s20 {
+          min-width: 425px;
+          width: 425px;
+          height: 66px;
+        }
+        .ps24 {
+          margin-left: 264px;
+          margin-top: 37px;
+        }
+        .s21 {
+          min-width: 676px;
+          width: 676px;
+          min-height: 429px;
+          height: 429px;
+        }
+        .i3 {
+          width: 676px;
+          height: 429px;
+        }
+        .ps25 {
+          margin-left: 264px;
+          margin-top: 125px;
+        }
+        .s22 {
+          min-width: 676px;
+          width: 676px;
+          min-height: 563px;
+        }
+        .s23 {
+          min-width: 676px;
+          width: 676px;
+          min-height: 563px;
+        }
+        .s24 {
+          min-width: 676px;
+          width: 676px;
+          min-height: 563px;
+          height: 563px;
+        }
+        .i4 {
+          width: 676px;
+          height: 563px;
+        }
+        .ps26 {
+          margin-left: 20px;
+          margin-top: -546px;
+        }
+        .s25 {
+          min-width: 224px;
+          width: 224px;
+          height: 111px;
+        }
+        .f4 {
+          font-size: 30px;
+          font-size: calc(30px * var(--f));
+          line-height: 1.201;
+        }
+        .ps27 {
+          margin-left: -224px;
+          margin-top: -436px;
+        }
+        .s26 {
+          min-width: 263px;
+          width: 263px;
+          height: 146px;
+        }
+        .f5 {
+          font-size: 15px;
+          font-size: calc(15px * var(--f));
+          line-height: 1.268;
+        }
+        .ps28 {
+          margin-left: 264px;
+          margin-top: 124px;
+        }
+        .s27 {
+          min-width: 676px;
+          width: 676px;
+          min-height: 293px;
+          height: 293px;
+        }
+        .i5 {
+          width: 676px;
+          height: 293px;
+        }
+        .ps29 {
+          margin-left: 455px;
+          margin-top: 36px;
+        }
+        .s28 {
+          min-width: 292px;
+          width: 292px;
+          height: 67px;
+        }
+        .f6 {
+          font-size: 40px;
+          font-size: calc(40px * var(--f));
+          line-height: 1.226;
+        }
+        .ps30 {
+          margin-left: -277px;
+          margin-top: 103px;
+        }
+        .f7 {
+          font-size: 15px;
+          font-size: calc(15px * var(--f));
+          line-height: 1.268;
+        }
+        .ps31 {
+          margin-left: 264px;
+          margin-top: 74px;
+        }
+        .ps32 {
+          margin-left: 450px;
+          margin-top: 37px;
+        }
+        .s29 {
+          min-width: 301px;
+          width: 301px;
+          height: 67px;
+        }
+        .ps33 {
+          margin-left: -281px;
+          margin-top: 104px;
+        }
+        .ps34 {
+          margin-left: 264px;
+          margin-top: 189px;
+        }
+        .ps35 {
+          margin-left: -453px;
+          margin-top: 519px;
+        }
+        .s30 {
+          min-width: 230px;
+          width: 230px;
+          height: 67px;
+        }
+        .ps36 {
+          margin-left: -247px;
+          margin-top: 585px;
+        }
+        .ps37 {
+          margin-left: 264px;
+          margin-top: -1353px;
+        }
+        .s31 {
+          min-width: 676px;
+          width: 676px;
+          min-height: 1353px;
+          height: 1353px;
+        }
+        .i6 {
+          min-width: 676px;
+          max-width: 676px;
+          min-height: 1353px;
+          max-height: 1353px;
+        }
+        body {
+          --d: 1;
+          --s: 1200;
+        }
+      }
+      @media (min-width: 960px) and (max-width: 1199px) {
+        .s1 {
+          width: 960px;
+          min-height: 4001px;
+        }
+        .s2 {
+          min-width: 961px;
+          width: 961px;
+          min-height: 4001px;
+        }
+        .s3 {
+          min-width: 961px;
+          width: 961px;
+          min-height: 4001px;
+        }
+        .s4 {
+          min-width: 961px;
+          width: 961px;
+          min-height: 4001px;
+        }
+        .s5 {
+          min-width: 960px;
+          width: 960px;
+          min-height: 63px;
+        }
+        .ps5 {
+          margin-left: 212px;
+          margin-top: 10px;
+        }
+        .s6 {
+          min-width: 540px;
+          width: 540px;
+          min-height: 43px;
+        }
+        .s7 {
+          min-width: 33px;
+          width: 33px;
+          min-height: 43px;
+        }
+        .s8 {
+          min-width: 33px;
+          width: 33px;
+          min-height: 33px;
+          height: 33px;
+        }
+        .i1 {
+          width: 33px;
+          height: 33px;
+        }
+        .ps6 {
+          margin-top: 1px;
+        }
+        .s9 {
+          min-width: 32px;
+          width: 32px;
+          height: 9px;
+        }
+        .f1 {
+          font-size: 7px;
+          font-size: calc(7px * var(--f));
+          line-height: 1.287;
+        }
+        .ps7 {
+          margin-left: 68px;
+        }
+        .ps8 {
+          margin-left: 10px;
+          margin-top: 1px;
+        }
+        .s10 {
+          min-width: 13px;
+          width: 13px;
+          height: 9px;
+        }
+        .ps9 {
+          margin-left: 68px;
+        }
+        .ps10 {
+          margin-left: 5px;
+          margin-top: 1px;
+        }
+        .s11 {
+          min-width: 24px;
+          width: 24px;
+          height: 9px;
+        }
+        .ps11 {
+          margin-left: 67px;
+        }
+        .ps12 {
+          margin-left: 2px;
+          margin-top: 1px;
+        }
+        .s12 {
+          min-width: 28px;
+          width: 28px;
+          height: 9px;
+        }
+        .ps13 {
+          margin-left: 68px;
+          margin-top: 0;
+        }
+        .s13 {
+          min-width: 36px;
+          width: 36px;
+          min-height: 42px;
+        }
+        .ps14 {
+          margin-left: 2px;
+        }
+        .ps15 {
+          margin-top: 0;
+        }
+        .s14 {
+          min-width: 36px;
+          width: 36px;
+          height: 9px;
+        }
+        .ps16 {
+          margin-left: 68px;
+        }
+        .ps17 {
+          margin-left: 8px;
+          margin-top: 1px;
+        }
+        .s15 {
+          min-width: 18px;
+          width: 18px;
+          height: 9px;
+        }
+        .ps18 {
+          margin-left: 211px;
+          margin-top: 9px;
+        }
+        .s16 {
+          min-width: 541px;
+          width: 541px;
+          min-height: 27px;
+        }
+        .s17 {
+          min-width: 108px;
+          width: 108px;
+          height: 23px;
+        }
+        .f2 {
+          font-size: 18px;
+          font-size: calc(18px * var(--f));
+          line-height: 1.168;
+        }
+        .ps19 {
+          margin-left: 314px;
+        }
+        .s18 {
+          min-width: 27px;
+          width: 27px;
+          min-height: 27px;
+          height: 27px;
+        }
+        .i2 {
+          min-width: 27px;
+          max-width: 27px;
+          min-height: 27px;
+          max-height: 27px;
+        }
+        .ps20 {
+          margin-left: 19px;
+        }
+        .ps21 {
+          margin-left: 19px;
+        }
+        .ps22 {
+          margin-left: 262px;
+          margin-top: 63px;
+        }
+        .s19 {
+          min-width: 439px;
+          width: 439px;
+          height: 60px;
+        }
+        .f3 {
+          font-size: 24px;
+          font-size: calc(24px * var(--f));
+          line-height: 1.209;
+        }
+        .ps23 {
+          margin-left: 311px;
+          margin-top: -1px;
+        }
+        .s20 {
+          min-width: 340px;
+          width: 340px;
+          height: 53px;
+        }
+        .ps24 {
+          margin-left: 211px;
+          margin-top: 29px;
+        }
+        .s21 {
+          min-width: 541px;
+          width: 541px;
+          min-height: 344px;
+          height: 344px;
+        }
+        .i3 {
+          width: 541px;
+          height: 344px;
+        }
+        .ps25 {
+          margin-left: 211px;
+          margin-top: 99px;
+        }
+        .s22 {
+          min-width: 541px;
+          width: 541px;
+          min-height: 451px;
+        }
+        .s23 {
+          min-width: 541px;
+          width: 541px;
+          min-height: 451px;
+        }
+        .s24 {
+          min-width: 541px;
+          width: 541px;
+          min-height: 451px;
+          height: 451px;
+        }
+        .i4 {
+          width: 541px;
+          height: 451px;
+        }
+        .ps26 {
+          margin-left: 16px;
+          margin-top: -437px;
+        }
+        .s25 {
+          min-width: 179px;
+          width: 179px;
+          height: 89px;
+        }
+        .f4 {
+          font-size: 24px;
+          font-size: calc(24px * var(--f));
+          line-height: 1.209;
+        }
+        .ps27 {
+          margin-left: -179px;
+          margin-top: -349px;
+        }
+        .s26 {
+          min-width: 210px;
+          width: 210px;
+          height: 117px;
+        }
+        .f5 {
+          font-size: 12px;
+          font-size: calc(12px * var(--f));
+          line-height: 1.251;
+        }
+        .ps28 {
+          margin-left: 211px;
+          margin-top: 99px;
+        }
+        .s27 {
+          min-width: 541px;
+          width: 541px;
+          min-height: 234px;
+          height: 234px;
+        }
+        .i5 {
+          width: 541px;
+          height: 234px;
+        }
+        .ps29 {
+          margin-left: 365px;
+          margin-top: 30px;
+        }
+        .s28 {
+          min-width: 234px;
+          width: 234px;
+          height: 54px;
+        }
+        .f6 {
+          font-size: 32px;
+          font-size: calc(32px * var(--f));
+          line-height: 1.22;
+        }
+        .ps30 {
+          margin-left: -223px;
+          margin-top: 83px;
+        }
+        .f7 {
+          font-size: 12px;
+          font-size: calc(12px * var(--f));
+          line-height: 1.251;
+        }
+        .ps31 {
+          margin-left: 211px;
+          margin-top: 59px;
+        }
+        .ps32 {
+          margin-left: 361px;
+          margin-top: 30px;
+        }
+        .s29 {
+          min-width: 241px;
+          width: 241px;
+          height: 54px;
+        }
+        .ps33 {
+          margin-left: -226px;
+          margin-top: 83px;
+        }
+        .ps34 {
+          margin-left: 211px;
+          margin-top: 152px;
+        }
+        .ps35 {
+          margin-left: -362px;
+          margin-top: 415px;
+        }
+        .s30 {
+          min-width: 184px;
+          width: 184px;
+          height: 54px;
+        }
+        .ps36 {
+          margin-left: -198px;
+          margin-top: 469px;
+        }
+        .ps37 {
+          margin-left: 211px;
+          margin-top: -1082px;
+        }
+        .s31 {
+          min-width: 541px;
+          width: 541px;
+          min-height: 1082px;
+          height: 1082px;
+        }
+        .i6 {
+          min-width: 540px;
+          max-width: 540px;
+          min-height: 1082px;
+          max-height: 1082px;
+        }
+        body {
+          --d: 2;
+          --s: 960;
+        }
+      }
+      @media (min-width: 768px) and (max-width: 959px) {
+        .s1 {
+          width: 768px;
+          min-height: 3201px;
+        }
+        .ps2 {
+          margin-left: 0;
+        }
+        .s2 {
+          min-width: 768px;
+          width: 768px;
+          min-height: 3201px;
+        }
+        .s3 {
+          min-width: 768px;
+          width: 768px;
+          min-height: 3201px;
+        }
+        .s4 {
+          min-width: 768px;
+          width: 768px;
+          min-height: 3200px;
+        }
+        .ps4 {
+          margin-left: 0;
+        }
+        .s5 {
+          min-width: 768px;
+          width: 768px;
+          min-height: 50px;
+        }
+        .ps5 {
+          margin-left: 168px;
+          margin-top: 8px;
+        }
+        .s6 {
+          min-width: 432px;
+          width: 432px;
+          min-height: 34px;
+        }
+        .s7 {
+          min-width: 26px;
+          width: 26px;
+          min-height: 34px;
+        }
+        .s8 {
+          min-width: 26px;
+          width: 26px;
+          min-height: 26px;
+          height: 26px;
+        }
+        .i1 {
+          width: 26px;
+          height: 26px;
+        }
+        .ps6 {
+          margin-top: 1px;
+        }
+        .s9 {
+          min-width: 26px;
+          width: 26px;
+          height: 7px;
+        }
+        .f1 {
+          font-size: 5px;
+          font-size: calc(5px * var(--f));
+          line-height: 1.201;
+        }
+        .ps7 {
+          margin-left: 55px;
+        }
+        .ps8 {
+          margin-left: 7px;
+          margin-top: 1px;
+        }
+        .s10 {
+          min-width: 10px;
+          width: 10px;
+          height: 7px;
+        }
+        .ps9 {
+          margin-left: 55px;
+        }
+        .ps10 {
+          margin-left: 3px;
+          margin-top: 1px;
+        }
+        .s11 {
+          min-width: 19px;
+          width: 19px;
+          height: 7px;
+        }
+        .ps11 {
+          margin-left: 54px;
+        }
+        .ps12 {
+          margin-left: 2px;
+          margin-top: 1px;
+        }
+        .s12 {
+          min-width: 22px;
+          width: 22px;
+          height: 7px;
+        }
+        .ps13 {
+          margin-left: 55px;
+          margin-top: 0;
+        }
+        .s13 {
+          min-width: 29px;
+          width: 29px;
+          min-height: 33px;
+        }
+        .ps14 {
+          margin-left: 1px;
+        }
+        .ps15 {
+          margin-top: 0;
+        }
+        .s14 {
+          min-width: 29px;
+          width: 29px;
+          height: 7px;
+        }
+        .ps16 {
+          margin-left: 54px;
+        }
+        .ps17 {
+          margin-left: 6px;
+          margin-top: 1px;
+        }
+        .s15 {
+          min-width: 14px;
+          width: 14px;
+          height: 7px;
+        }
+        .ps18 {
+          margin-left: 168px;
+          margin-top: 8px;
+        }
+        .s16 {
+          min-width: 432px;
+          width: 432px;
+          min-height: 21px;
+        }
+        .s17 {
+          min-width: 86px;
+          width: 86px;
+          height: 18px;
+        }
+        .f2 {
+          font-size: 14px;
+          font-size: calc(14px * var(--f));
+          line-height: 1.215;
+        }
+        .ps19 {
+          margin-left: 252px;
+        }
+        .s18 {
+          min-width: 21px;
+          width: 21px;
+          min-height: 21px;
+          height: 21px;
+        }
+        .i2 {
+          min-width: 21px;
+          max-width: 21px;
+          min-height: 21px;
+          max-height: 21px;
+        }
+        .ps20 {
+          margin-left: 15px;
+        }
+        .ps21 {
+          margin-left: 16px;
+        }
+        .ps22 {
+          margin-left: 208px;
+          margin-top: 50px;
+        }
+        .s19 {
+          min-width: 351px;
+          width: 351px;
+          height: 48px;
+        }
+        .f3 {
+          font-size: 19px;
+          font-size: calc(19px * var(--f));
+          line-height: 1.212;
+        }
+        .ps23 {
+          margin-left: 248px;
+        }
+        .s20 {
+          min-width: 272px;
+          width: 272px;
+          height: 42px;
+        }
+        .ps24 {
+          margin-left: 168px;
+          margin-top: 23px;
+        }
+        .s21 {
+          min-width: 432px;
+          width: 432px;
+          min-height: 275px;
+          height: 275px;
+        }
+        .i3 {
+          width: 432px;
+          height: 275px;
+        }
+        .ps25 {
+          margin-left: 168px;
+          margin-top: 80px;
+        }
+        .s22 {
+          min-width: 432px;
+          width: 432px;
+          min-height: 360px;
+        }
+        .s23 {
+          min-width: 432px;
+          width: 432px;
+          min-height: 360px;
+        }
+        .s24 {
+          min-width: 432px;
+          width: 432px;
+          min-height: 360px;
+          height: 360px;
+        }
+        .i4 {
+          width: 432px;
+          height: 360px;
+        }
+        .ps26 {
+          margin-left: 13px;
+          margin-top: -349px;
+        }
+        .s25 {
+          min-width: 143px;
+          width: 143px;
+          height: 71px;
+        }
+        .f4 {
+          font-size: 19px;
+          font-size: calc(19px * var(--f));
+          line-height: 1.212;
+        }
+        .ps27 {
+          margin-left: -143px;
+          margin-top: -279px;
+        }
+        .s26 {
+          min-width: 168px;
+          width: 168px;
+          height: 93px;
+        }
+        .f5 {
+          font-size: 9px;
+          font-size: calc(9px * var(--f));
+          line-height: 1.223;
+        }
+        .ps28 {
+          margin-left: 168px;
+          margin-top: 80px;
+        }
+        .s27 {
+          min-width: 432px;
+          width: 432px;
+          min-height: 187px;
+          height: 187px;
+        }
+        .i5 {
+          width: 432px;
+          height: 187px;
+        }
+        .ps29 {
+          margin-left: 291px;
+          margin-top: 24px;
+        }
+        .s28 {
+          min-width: 187px;
+          width: 187px;
+          height: 43px;
+        }
+        .f6 {
+          font-size: 25px;
+          font-size: calc(25px * var(--f));
+          line-height: 1.201;
+        }
+        .ps30 {
+          margin-left: -178px;
+          margin-top: 66px;
+        }
+        .f7 {
+          font-size: 9px;
+          font-size: calc(9px * var(--f));
+          line-height: 1.223;
+        }
+        .ps31 {
+          margin-left: 168px;
+          margin-top: 48px;
+        }
+        .ps32 {
+          margin-left: 288px;
+          margin-top: 24px;
+        }
+        .s29 {
+          min-width: 192px;
+          width: 192px;
+          height: 43px;
+        }
+        .ps33 {
+          margin-left: -180px;
+          margin-top: 67px;
+        }
+        .ps34 {
+          margin-left: 168px;
+          margin-top: 122px;
+        }
+        .ps35 {
+          margin-left: -289px;
+          margin-top: 332px;
+        }
+        .s30 {
+          min-width: 147px;
+          width: 147px;
+          height: 43px;
+        }
+        .ps36 {
+          margin-left: -158px;
+          margin-top: 375px;
+        }
+        .ps37 {
+          margin-left: 168px;
+          margin-top: -865px;
+        }
+        .s31 {
+          min-width: 432px;
+          width: 432px;
+          min-height: 866px;
+          height: 866px;
+        }
+        .i6 {
+          min-width: 432px;
+          max-width: 432px;
+          min-height: 865px;
+          max-height: 865px;
+          top: 1px;
+        }
+        body {
+          --d: 3;
+          --s: 768;
+        }
+      }
+      @media (min-width: 480px) and (max-width: 767px) {
+        .s1 {
+          width: 480px;
+          min-height: 2000px;
+        }
+        .ps2 {
+          margin-left: 0;
+        }
+        .s2 {
+          min-width: 480px;
+          width: 480px;
+          min-height: 2000px;
+        }
+        .s3 {
+          min-width: 480px;
+          width: 480px;
+          min-height: 2000px;
+        }
+        .s4 {
+          min-width: 480px;
+          width: 480px;
+          min-height: 2000px;
+        }
+        .ps4 {
+          margin-left: 0;
+        }
+        .s5 {
+          min-width: 480px;
+          width: 480px;
+          min-height: 31px;
+        }
+        .ps5 {
+          margin-left: 105px;
+          margin-top: 5px;
+        }
+        .s6 {
+          min-width: 270px;
+          width: 270px;
+          min-height: 22px;
+        }
+        .s7 {
+          min-width: 16px;
+          width: 16px;
+          min-height: 22px;
+        }
+        .s8 {
+          min-width: 16px;
+          width: 16px;
+          min-height: 16px;
+          height: 16px;
+        }
+        .i1 {
+          width: 16px;
+          height: 16px;
+        }
+        .ps6 {
+          margin-top: 1px;
+        }
+        .s9 {
+          min-width: 16px;
+          width: 16px;
+          height: 5px;
+        }
+        .f1 {
+          font-size: 3px;
+          font-size: calc(3px * var(--f));
+          line-height: 1.334;
+        }
+        .ps7 {
+          margin-left: 35px;
+        }
+        .ps8 {
+          margin-left: 4px;
+          margin-top: 1px;
+        }
+        .s10 {
+          min-width: 7px;
+          width: 7px;
+          height: 5px;
+        }
+        .ps9 {
+          margin-left: 34px;
+        }
+        .ps10 {
+          margin-left: 2px;
+          margin-top: 1px;
+        }
+        .s11 {
+          min-width: 12px;
+          width: 12px;
+          height: 5px;
+        }
+        .ps11 {
+          margin-left: 34px;
+        }
+        .ps12 {
+          margin-left: 1px;
+          margin-top: 1px;
+        }
+        .s12 {
+          min-width: 14px;
+          width: 14px;
+          height: 5px;
+        }
+        .ps13 {
+          margin-left: 35px;
+          margin-top: 0;
+        }
+        .s13 {
+          min-width: 18px;
+          width: 18px;
+          min-height: 22px;
+        }
+        .ps14 {
+          margin-left: 1px;
+        }
+        .s14 {
+          min-width: 18px;
+          width: 18px;
+          height: 5px;
+        }
+        .ps16 {
+          margin-left: 34px;
+        }
+        .ps17 {
+          margin-left: 4px;
+          margin-top: 1px;
+        }
+        .s15 {
+          min-width: 9px;
+          width: 9px;
+          height: 5px;
+        }
+        .ps18 {
+          margin-left: 105px;
+          margin-top: 5px;
+        }
+        .s16 {
+          min-width: 270px;
+          width: 270px;
+          min-height: 13px;
+        }
+        .s17 {
+          min-width: 54px;
+          width: 54px;
+          height: 11px;
+        }
+        .f2 {
+          font-size: 9px;
+          font-size: calc(9px * var(--f));
+        }
+        .ps19 {
+          margin-left: 157px;
+        }
+        .s18 {
+          min-width: 13px;
+          width: 13px;
+          min-height: 13px;
+          height: 13px;
+        }
+        .i2 {
+          min-width: 13px;
+          max-width: 13px;
+          min-height: 13px;
+          max-height: 13px;
+        }
+        .ps20 {
+          margin-left: 10px;
+        }
+        .ps21 {
+          margin-left: 10px;
+        }
+        .ps22 {
+          margin-left: 130px;
+          margin-top: 32px;
+        }
+        .s19 {
+          min-width: 219px;
+          width: 219px;
+          height: 30px;
+        }
+        .f3 {
+          font-size: 12px;
+          font-size: calc(12px * var(--f));
+          line-height: 1.251;
+        }
+        .ps23 {
+          margin-left: 155px;
+        }
+        .s20 {
+          min-width: 170px;
+          width: 170px;
+          height: 26px;
+        }
+        .ps24 {
+          margin-left: 105px;
+          margin-top: 15px;
+        }
+        .s21 {
+          min-width: 270px;
+          width: 270px;
+          min-height: 172px;
+          height: 172px;
+        }
+        .i3 {
+          width: 270px;
+          height: 172px;
+        }
+        .ps25 {
+          margin-left: 105px;
+          margin-top: 49px;
+        }
+        .s22 {
+          min-width: 270px;
+          width: 270px;
+          min-height: 225px;
+        }
+        .s23 {
+          min-width: 270px;
+          width: 270px;
+          min-height: 225px;
+        }
+        .s24 {
+          min-width: 270px;
+          width: 270px;
+          min-height: 225px;
+          height: 225px;
+        }
+        .i4 {
+          width: 270px;
+          height: 225px;
+        }
+        .ps26 {
+          margin-left: 8px;
+          margin-top: -218px;
+        }
+        .s25 {
+          min-width: 90px;
+          width: 90px;
+          height: 45px;
+        }
+        .f4 {
+          font-size: 12px;
+          font-size: calc(12px * var(--f));
+          line-height: 1.251;
+        }
+        .ps27 {
+          margin-left: -90px;
+          margin-top: -174px;
+        }
+        .s26 {
+          min-width: 105px;
+          width: 105px;
+          height: 58px;
+        }
+        .f5 {
+          font-size: 6px;
+          font-size: calc(6px * var(--f));
+          line-height: 1.168;
+        }
+        .ps28 {
+          margin-left: 105px;
+          margin-top: 50px;
+        }
+        .s27 {
+          min-width: 270px;
+          width: 270px;
+          min-height: 117px;
+          height: 117px;
+        }
+        .i5 {
+          width: 270px;
+          height: 117px;
+        }
+        .ps29 {
+          margin-left: 182px;
+          margin-top: 15px;
+        }
+        .s28 {
+          min-width: 117px;
+          width: 117px;
+          height: 27px;
+        }
+        .f6 {
+          font-size: 16px;
+          font-size: calc(16px * var(--f));
+          line-height: 1.251;
+        }
+        .ps30 {
+          margin-left: -111px;
+          margin-top: 42px;
+        }
+        .f7 {
+          font-size: 6px;
+          font-size: calc(6px * var(--f));
+          line-height: 1.168;
+        }
+        .ps31 {
+          margin-left: 105px;
+          margin-top: 30px;
+        }
+        .ps32 {
+          margin-left: 180px;
+          margin-top: 14px;
+        }
+        .s29 {
+          min-width: 120px;
+          width: 120px;
+          height: 27px;
+        }
+        .ps33 {
+          margin-left: -112px;
+          margin-top: 41px;
+        }
+        .ps34 {
+          margin-left: 105px;
+          margin-top: 76px;
+        }
+        .ps35 {
+          margin-left: -181px;
+          margin-top: 208px;
+        }
+        .s30 {
+          min-width: 92px;
+          width: 92px;
+          height: 27px;
+        }
+        .ps36 {
+          margin-left: -98px;
+          margin-top: 235px;
+        }
+        .ps37 {
+          margin-left: 105px;
+          margin-top: -541px;
+        }
+        .s31 {
+          min-width: 270px;
+          width: 270px;
+          min-height: 541px;
+          height: 541px;
+        }
+        .i6 {
+          min-width: 270px;
+          max-width: 270px;
+          min-height: 541px;
+          max-height: 541px;
+        }
+        body {
+          --d: 4;
+          --s: 480;
+        }
+      }
+      @media (max-width: 479px) {
+        .s1 {
+          width: 320px;
+          min-height: 1334px;
+        }
+        .ps2 {
+          margin-left: 0;
+        }
+        .s2 {
+          min-width: 320px;
+          width: 320px;
+          min-height: 1334px;
+        }
+        .s3 {
+          min-width: 320px;
+          width: 320px;
+          min-height: 1334px;
+        }
+        .s4 {
+          min-width: 320px;
+          width: 320px;
+          min-height: 1334px;
+        }
+        .ps4 {
+          margin-left: 0;
+        }
+        .s5 {
+          min-width: 320px;
+          width: 320px;
+          min-height: 21px;
+        }
+        .ps5 {
+          margin-left: 70px;
+          margin-top: 3px;
+        }
+        .s6 {
+          min-width: 180px;
+          width: 180px;
+          min-height: 15px;
+        }
+        .s7 {
+          min-width: 11px;
+          width: 11px;
+          min-height: 15px;
+        }
+        .s8 {
+          min-width: 11px;
+          width: 11px;
+          min-height: 11px;
+          height: 11px;
+        }
+        .i1 {
+          width: 11px;
+          height: 11px;
+        }
+        .ps6 {
+          margin-top: 1px;
+        }
+        .s9 {
+          min-width: 11px;
+          width: 11px;
+          height: 3px;
+        }
+        .f1 {
+          font-size: 2px;
+          font-size: calc(2px * var(--f));
+          line-height: 1.001;
+        }
+        .ps7 {
+          margin-left: 23px;
+        }
+        .ps8 {
+          margin-left: 3px;
+          margin-top: 1px;
+        }
+        .s10 {
+          min-width: 4px;
+          width: 4px;
+          height: 3px;
+        }
+        .ps9 {
+          margin-left: 22px;
+        }
+        .ps10 {
+          margin-left: 2px;
+          margin-top: 1px;
+        }
+        .s11 {
+          min-width: 8px;
+          width: 8px;
+          height: 3px;
+        }
+        .ps11 {
+          margin-left: 23px;
+        }
+        .ps12 {
+          margin-left: 1px;
+          margin-top: 1px;
+        }
+        .s12 {
+          min-width: 9px;
+          width: 9px;
+          height: 3px;
+        }
+        .ps13 {
+          margin-left: 23px;
+          margin-top: 0;
+        }
+        .s13 {
+          min-width: 12px;
+          width: 12px;
+          min-height: 14px;
+        }
+        .ps14 {
+          margin-left: 0;
+        }
+        .ps15 {
+          margin-top: 0;
+        }
+        .s14 {
+          min-width: 12px;
+          width: 12px;
+          height: 3px;
+        }
+        .ps16 {
+          margin-left: 22px;
+        }
+        .ps17 {
+          margin-left: 3px;
+          margin-top: 1px;
+        }
+        .s15 {
+          min-width: 6px;
+          width: 6px;
+          height: 3px;
+        }
+        .ps18 {
+          margin-left: 70px;
+          margin-top: 3px;
+        }
+        .s16 {
+          min-width: 180px;
+          width: 180px;
+          min-height: 9px;
+        }
+        .s17 {
+          min-width: 36px;
+          width: 36px;
+          height: 8px;
+        }
+        .f2 {
+          font-size: 6px;
+          font-size: calc(6px * var(--f));
+          line-height: 1.168;
+        }
+        .ps19 {
+          margin-left: 105px;
+        }
+        .s18 {
+          min-width: 9px;
+          width: 9px;
+          min-height: 9px;
+          height: 9px;
+        }
+        .i2 {
+          min-width: 9px;
+          max-width: 9px;
+          min-height: 9px;
+          max-height: 9px;
+        }
+        .ps20 {
+          margin-left: 6px;
+        }
+        .ps21 {
+          margin-left: 6px;
+        }
+        .ps22 {
+          margin-left: 87px;
+          margin-top: 21px;
+        }
+        .s19 {
+          min-width: 146px;
+          width: 146px;
+          height: 20px;
+        }
+        .f3 {
+          font-size: 8px;
+          font-size: calc(8px * var(--f));
+          line-height: 1.251;
+        }
+        .ps23 {
+          margin-left: 103px;
+        }
+        .s20 {
+          min-width: 113px;
+          width: 113px;
+          height: 18px;
+        }
+        .ps24 {
+          margin-left: 70px;
+          margin-top: 9px;
+        }
+        .s21 {
+          min-width: 180px;
+          width: 180px;
+          min-height: 115px;
+          height: 115px;
+        }
+        .i3 {
+          width: 180px;
+          height: 115px;
+        }
+        .ps25 {
+          margin-left: 70px;
+          margin-top: 33px;
+        }
+        .s22 {
+          min-width: 180px;
+          width: 180px;
+          min-height: 150px;
+        }
+        .s23 {
+          min-width: 180px;
+          width: 180px;
+          min-height: 150px;
+        }
+        .s24 {
+          min-width: 180px;
+          width: 180px;
+          min-height: 150px;
+          height: 150px;
+        }
+        .i4 {
+          width: 180px;
+          height: 150px;
+        }
+        .ps26 {
+          margin-left: 5px;
+          margin-top: -146px;
+        }
+        .s25 {
+          min-width: 60px;
+          width: 60px;
+          height: 30px;
+        }
+        .f4 {
+          font-size: 8px;
+          font-size: calc(8px * var(--f));
+          line-height: 1.251;
+        }
+        .ps27 {
+          margin-left: -60px;
+          margin-top: -116px;
+        }
+        .s26 {
+          min-width: 70px;
+          width: 70px;
+          height: 39px;
+        }
+        .f5 {
+          font-size: 4px;
+          font-size: calc(4px * var(--f));
+          line-height: 1.251;
+        }
+        .ps28 {
+          margin-left: 70px;
+          margin-top: 33px;
+        }
+        .s27 {
+          min-width: 180px;
+          width: 180px;
+          min-height: 78px;
+          height: 78px;
+        }
+        .i5 {
+          width: 180px;
+          height: 78px;
+        }
+        .ps29 {
+          margin-left: 121px;
+          margin-top: 10px;
+        }
+        .s28 {
+          min-width: 78px;
+          width: 78px;
+          height: 18px;
+        }
+        .f6 {
+          font-size: 10px;
+          font-size: calc(10px * var(--f));
+          line-height: 1.201;
+        }
+        .ps30 {
+          margin-left: -74px;
+          margin-top: 28px;
+        }
+        .f7 {
+          font-size: 4px;
+          font-size: calc(4px * var(--f));
+          line-height: 1.251;
+        }
+        .ps31 {
+          margin-left: 70px;
+          margin-top: 19px;
+        }
+        .ps32 {
+          margin-left: 120px;
+          margin-top: 10px;
+        }
+        .s29 {
+          min-width: 80px;
+          width: 80px;
+          height: 18px;
+        }
+        .ps33 {
+          margin-left: -75px;
+          margin-top: 28px;
+        }
+        .ps34 {
+          margin-left: 70px;
+          margin-top: 51px;
+        }
+        .ps35 {
+          margin-left: -120px;
+          margin-top: 138px;
+        }
+        .s30 {
+          min-width: 61px;
+          width: 61px;
+          height: 18px;
+        }
+        .ps36 {
+          margin-left: -66px;
+          margin-top: 156px;
+        }
+        .ps37 {
+          margin-left: 70px;
+          margin-top: -361px;
+        }
+        .s31 {
+          min-width: 180px;
+          width: 180px;
+          min-height: 361px;
+          height: 361px;
+        }
+        .i6 {
+          min-width: 180px;
+          max-width: 180px;
+          min-height: 361px;
+          max-height: 361px;
+        }
+        body {
+          --d: 5;
+          --s: 320;
+        }
+      }
+    </style>
+    <link
+      onload="this.media='all';this.onload=null;"
+      rel="stylesheet"
+      href="css/site.c3a51f.css"
+      media="print"
+    />
+  </head>
+  <body id="b">
+    <script>
+      var p = document.createElement("P");
+      (p.innerHTML = "&nbsp;"),
+        (p.style.cssText =
+          "position:fixed;visible:hidden;font-size:100px;zoom:1"),
+        document.body.appendChild(p);
+      var rsz = (function (e) {
+        return function () {
+          var r =
+              Math.trunc(
+                1e3 /
+                  parseFloat(
+                    window.getComputedStyle(e).getPropertyValue("font-size")
+                  )
+              ) / 10,
+            t = document.body;
+          r != t.style.getPropertyValue("--f") && t.style.setProperty("--f", r);
+        };
+      })(p);
+      if ("ResizeObserver" in window) {
+        var ro = new ResizeObserver(rsz);
+        ro.observe(p);
+      } else if ("requestAnimationFrame" in window) {
+        var raf = function () {
+          rsz(), requestAnimationFrame(raf);
+        };
+        requestAnimationFrame(raf);
+      } else setInterval(rsz, 100);
+    </script>
+
+    <script>
+      !(function () {
+        var e = function () {
+          var e = document.body;
+          e.style.setProperty("--z", 1);
+          var t = window.innerWidth,
+            n = getComputedStyle(e).getPropertyValue("--s");
+          if (320 == n) {
+            if (t < 320) return;
+            t = Math.min(479, t);
+          } else if (480 == n) {
+            if (t < 480) return;
+            t = Math.min(610, t);
+          } else t = n;
+          e.style.setProperty("--z", Math.trunc((t / n) * 1e3) / 1e3);
+        };
+        window.addEventListener
+          ? window.addEventListener("resize", e, !0)
+          : (window.onscroll = e),
+          e();
+      })();
+    </script>
+
+    <div class="ps1 v1 s1 z1">
+      <div class="v2 ps2 s2">
+        <div class="v2 ps3 s2">
+          <div class="v2 ps3 s3">
+            <div class="v2 ps3 s4 c2 z2">
+              <div class="v2 ps4 s5 z3">
+                <div class="v2 ps3 s5 c2 z4">
+                  <div class="v2 ps5 s6">
+                    <div class="v2 ps3 s7 z5">
+                      <div class="v2 ps3 s8 c3 z6">
+                        <picture>
+                          <source
+                            srcset="images/icon_overview-22.webp 2x"
+                            type="image/webp"
+                            media="(max-width:479px)"
+                          />
+                          <source
+                            srcset="images/icon_overview-22.png 2x"
+                            media="(max-width:479px)"
+                          />
+                          <source
+                            srcset="images/icon_overview-32.webp 2x"
+                            type="image/webp"
+                            media="(max-width:767px)"
+                          />
+                          <source
+                            srcset="images/icon_overview-32.png 2x"
+                            media="(max-width:767px)"
+                          />
+                          <source
+                            srcset="images/icon_overview-52.webp 2x"
+                            type="image/webp"
+                            media="(max-width:959px)"
+                          />
+                          <source
+                            srcset="images/icon_overview-52.png 2x"
+                            media="(max-width:959px)"
+                          />
+                          <source
+                            srcset="
+                              images/icon_overview-33.webp 1x,
+                              images/icon_overview-66.webp 2x
+                            "
+                            type="image/webp"
+                            media="(max-width:1199px)"
+                          />
+                          <source
+                            srcset="
+                              images/icon_overview-33.png 1x,
+                              images/icon_overview-66.png 2x
+                            "
+                            media="(max-width:1199px)"
+                          />
+                          <source
+                            srcset="
+                              images/icon_overview-41.webp 1x,
+                              images/icon_overview-82.webp 2x
+                            "
+                            type="image/webp"
+                            media="(max-width:1919px)"
+                          />
+                          <source
+                            srcset="
+                              images/icon_overview-41.png 1x,
+                              images/icon_overview-82.png 2x
+                            "
+                            media="(max-width:1919px)"
+                          />
+                          <source
+                            srcset="
+                              images/icon_overview-65.webp  1x,
+                              images/icon_overview-130.webp 2x
+                            "
+                            type="image/webp"
+                            media="(min-width:1920px)"
+                          />
+                          <source
+                            srcset="
+                              images/icon_overview-65.png  1x,
+                              images/icon_overview-130.png 2x
+                            "
+                            media="(min-width:1920px)"
+                          />
+                          <img src="images/icon_overview-130.png" class="i1" />
+                        </picture>
+                      </div>
+                      <div class="v2 ps6 s9 c3 z6">
+                        <p class="p1 f1">Overview</p>
+                      </div>
+                    </div>
+                    <div class="v2 ps7 s7 z7">
+                      <div class="v2 ps3 s8 c3 z6">
+                        <picture>
+                          <source
+                            srcset="images/icon_log-22.webp 2x"
+                            type="image/webp"
+                            media="(max-width:479px)"
+                          />
+                          <source
+                            srcset="images/icon_log-22.png 2x"
+                            media="(max-width:479px)"
+                          />
+                          <source
+                            srcset="images/icon_log-32.webp 2x"
+                            type="image/webp"
+                            media="(max-width:767px)"
+                          />
+                          <source
+                            srcset="images/icon_log-32.png 2x"
+                            media="(max-width:767px)"
+                          />
+                          <source
+                            srcset="images/icon_log-52.webp 2x"
+                            type="image/webp"
+                            media="(max-width:959px)"
+                          />
+                          <source
+                            srcset="images/icon_log-52.png 2x"
+                            media="(max-width:959px)"
+                          />
+                          <source
+                            srcset="
+                              images/icon_log-33.webp 1x,
+                              images/icon_log-66.webp 2x
+                            "
+                            type="image/webp"
+                            media="(max-width:1199px)"
+                          />
+                          <source
+                            srcset="
+                              images/icon_log-33.png 1x,
+                              images/icon_log-66.png 2x
+                            "
+                            media="(max-width:1199px)"
+                          />
+                          <source
+                            srcset="
+                              images/icon_log-41.webp 1x,
+                              images/icon_log-82.webp 2x
+                            "
+                            type="image/webp"
+                            media="(max-width:1919px)"
+                          />
+                          <source
+                            srcset="
+                              images/icon_log-41.png 1x,
+                              images/icon_log-82.png 2x
+                            "
+                            media="(max-width:1919px)"
+                          />
+                          <source
+                            srcset="
+                              images/icon_log-65.webp  1x,
+                              images/icon_log-130.webp 2x
+                            "
+                            type="image/webp"
+                            media="(min-width:1920px)"
+                          />
+                          <source
+                            srcset="
+                              images/icon_log-65.png  1x,
+                              images/icon_log-130.png 2x
+                            "
+                            media="(min-width:1920px)"
+                          />
+                          <img src="images/icon_log-130.png" class="i1" />
+                        </picture>
+                      </div>
+                      <div class="v2 ps8 s10 c3 z6">
+                        <p class="p1 f1">Log</p>
+                      </div>
+                    </div>
+                    <div class="v2 ps9 s7 z8">
+                      <div class="v2 ps3 s8 c3 z6">
+                        <picture>
+                          <source
+                            srcset="images/icon_gallery-22.webp 2x"
+                            type="image/webp"
+                            media="(max-width:479px)"
+                          />
+                          <source
+                            srcset="images/icon_gallery-22.png 2x"
+                            media="(max-width:479px)"
+                          />
+                          <source
+                            srcset="images/icon_gallery-32.webp 2x"
+                            type="image/webp"
+                            media="(max-width:767px)"
+                          />
+                          <source
+                            srcset="images/icon_gallery-32.png 2x"
+                            media="(max-width:767px)"
+                          />
+                          <source
+                            srcset="images/icon_gallery-52.webp 2x"
+                            type="image/webp"
+                            media="(max-width:959px)"
+                          />
+                          <source
+                            srcset="images/icon_gallery-52.png 2x"
+                            media="(max-width:959px)"
+                          />
+                          <source
+                            srcset="
+                              images/icon_gallery-33.webp 1x,
+                              images/icon_gallery-66.webp 2x
+                            "
+                            type="image/webp"
+                            media="(max-width:1199px)"
+                          />
+                          <source
+                            srcset="
+                              images/icon_gallery-33.png 1x,
+                              images/icon_gallery-66.png 2x
+                            "
+                            media="(max-width:1199px)"
+                          />
+                          <source
+                            srcset="
+                              images/icon_gallery-41.webp 1x,
+                              images/icon_gallery-82.webp 2x
+                            "
+                            type="image/webp"
+                            media="(max-width:1919px)"
+                          />
+                          <source
+                            srcset="
+                              images/icon_gallery-41.png 1x,
+                              images/icon_gallery-82.png 2x
+                            "
+                            media="(max-width:1919px)"
+                          />
+                          <source
+                            srcset="
+                              images/icon_gallery-65.webp  1x,
+                              images/icon_gallery-130.webp 2x
+                            "
+                            type="image/webp"
+                            media="(min-width:1920px)"
+                          />
+                          <source
+                            srcset="
+                              images/icon_gallery-65.png  1x,
+                              images/icon_gallery-130.png 2x
+                            "
+                            media="(min-width:1920px)"
+                          />
+                          <img src="images/icon_gallery-130.png" class="i1" />
+                        </picture>
+                      </div>
+                      <div class="v2 ps10 s11 c3 z6">
+                        <p class="p1 f1">Gallery</p>
+                      </div>
+                    </div>
+                    <div class="v2 ps11 s7 z9">
+                      <div class="v2 ps3 s8 c3 z6">
+                        <picture>
+                          <source
+                            srcset="images/icon_projects-22.webp 2x"
+                            type="image/webp"
+                            media="(max-width:479px)"
+                          />
+                          <source
+                            srcset="images/icon_projects-22.png 2x"
+                            media="(max-width:479px)"
+                          />
+                          <source
+                            srcset="images/icon_projects-32.webp 2x"
+                            type="image/webp"
+                            media="(max-width:767px)"
+                          />
+                          <source
+                            srcset="images/icon_projects-32.png 2x"
+                            media="(max-width:767px)"
+                          />
+                          <source
+                            srcset="images/icon_projects-52.webp 2x"
+                            type="image/webp"
+                            media="(max-width:959px)"
+                          />
+                          <source
+                            srcset="images/icon_projects-52.png 2x"
+                            media="(max-width:959px)"
+                          />
+                          <source
+                            srcset="
+                              images/icon_projects-33.webp 1x,
+                              images/icon_projects-66.webp 2x
+                            "
+                            type="image/webp"
+                            media="(max-width:1199px)"
+                          />
+                          <source
+                            srcset="
+                              images/icon_projects-33.png 1x,
+                              images/icon_projects-66.png 2x
+                            "
+                            media="(max-width:1199px)"
+                          />
+                          <source
+                            srcset="
+                              images/icon_projects-41.webp 1x,
+                              images/icon_projects-82.webp 2x
+                            "
+                            type="image/webp"
+                            media="(max-width:1919px)"
+                          />
+                          <source
+                            srcset="
+                              images/icon_projects-41.png 1x,
+                              images/icon_projects-82.png 2x
+                            "
+                            media="(max-width:1919px)"
+                          />
+                          <source
+                            srcset="
+                              images/icon_projects-65.webp  1x,
+                              images/icon_projects-130.webp 2x
+                            "
+                            type="image/webp"
+                            media="(min-width:1920px)"
+                          />
+                          <source
+                            srcset="
+                              images/icon_projects-65.png  1x,
+                              images/icon_projects-130.png 2x
+                            "
+                            media="(min-width:1920px)"
+                          />
+                          <img src="images/icon_projects-130.png" class="i1" />
+                        </picture>
+                      </div>
+                      <div class="v2 ps12 s12 c3 z6">
+                        <p class="p1 f1">Projects</p>
+                      </div>
+                    </div>
+                    <div class="v2 ps13 s13 z10">
+                      <div class="v2 ps14 s8 c3 z6">
+                        <picture>
+                          <source
+                            srcset="images/icon_contribute-22.webp 2x"
+                            type="image/webp"
+                            media="(max-width:479px)"
+                          />
+                          <source
+                            srcset="images/icon_contribute-22.png 2x"
+                            media="(max-width:479px)"
+                          />
+                          <source
+                            srcset="images/icon_contribute-32.webp 2x"
+                            type="image/webp"
+                            media="(max-width:767px)"
+                          />
+                          <source
+                            srcset="images/icon_contribute-32.png 2x"
+                            media="(max-width:767px)"
+                          />
+                          <source
+                            srcset="images/icon_contribute-52.webp 2x"
+                            type="image/webp"
+                            media="(max-width:959px)"
+                          />
+                          <source
+                            srcset="images/icon_contribute-52.png 2x"
+                            media="(max-width:959px)"
+                          />
+                          <source
+                            srcset="
+                              images/icon_contribute-33.webp 1x,
+                              images/icon_contribute-66.webp 2x
+                            "
+                            type="image/webp"
+                            media="(max-width:1199px)"
+                          />
+                          <source
+                            srcset="
+                              images/icon_contribute-33.png 1x,
+                              images/icon_contribute-66.png 2x
+                            "
+                            media="(max-width:1199px)"
+                          />
+                          <source
+                            srcset="
+                              images/icon_contribute-41.webp 1x,
+                              images/icon_contribute-82.webp 2x
+                            "
+                            type="image/webp"
+                            media="(max-width:1919px)"
+                          />
+                          <source
+                            srcset="
+                              images/icon_contribute-41.png 1x,
+                              images/icon_contribute-82.png 2x
+                            "
+                            media="(max-width:1919px)"
+                          />
+                          <source
+                            srcset="
+                              images/icon_contribute-65.webp  1x,
+                              images/icon_contribute-130.webp 2x
+                            "
+                            type="image/webp"
+                            media="(min-width:1920px)"
+                          />
+                          <source
+                            srcset="
+                              images/icon_contribute-65.png  1x,
+                              images/icon_contribute-130.png 2x
+                            "
+                            media="(min-width:1920px)"
+                          />
+                          <img
+                            src="images/icon_contribute-130.png"
+                            class="i1"
+                          />
+                        </picture>
+                      </div>
+                      <div class="v2 ps15 s14 c3 z6">
+                        <p class="p1 f1">Contribute</p>
+                      </div>
+                    </div>
+                    <div class="v2 ps16 s7 z11">
+                      <div class="v2 ps3 s8 c3 z6">
+                        <picture>
+                          <source
+                            srcset="images/icon_more-22.webp 2x"
+                            type="image/webp"
+                            media="(max-width:479px)"
+                          />
+                          <source
+                            srcset="images/icon_more-22.png 2x"
+                            media="(max-width:479px)"
+                          />
+                          <source
+                            srcset="images/icon_more-32.webp 2x"
+                            type="image/webp"
+                            media="(max-width:767px)"
+                          />
+                          <source
+                            srcset="images/icon_more-32.png 2x"
+                            media="(max-width:767px)"
+                          />
+                          <source
+                            srcset="images/icon_more-52.webp 2x"
+                            type="image/webp"
+                            media="(max-width:959px)"
+                          />
+                          <source
+                            srcset="images/icon_more-52.png 2x"
+                            media="(max-width:959px)"
+                          />
+                          <source
+                            srcset="
+                              images/icon_more-33.webp 1x,
+                              images/icon_more-66.webp 2x
+                            "
+                            type="image/webp"
+                            media="(max-width:1199px)"
+                          />
+                          <source
+                            srcset="
+                              images/icon_more-33.png 1x,
+                              images/icon_more-66.png 2x
+                            "
+                            media="(max-width:1199px)"
+                          />
+                          <source
+                            srcset="
+                              images/icon_more-41.webp 1x,
+                              images/icon_more-82.webp 2x
+                            "
+                            type="image/webp"
+                            media="(max-width:1919px)"
+                          />
+                          <source
+                            srcset="
+                              images/icon_more-41.png 1x,
+                              images/icon_more-82.png 2x
+                            "
+                            media="(max-width:1919px)"
+                          />
+                          <source
+                            srcset="
+                              images/icon_more-65.webp  1x,
+                              images/icon_more-130.webp 2x
+                            "
+                            type="image/webp"
+                            media="(min-width:1920px)"
+                          />
+                          <source
+                            srcset="
+                              images/icon_more-65.png  1x,
+                              images/icon_more-130.png 2x
+                            "
+                            media="(min-width:1920px)"
+                          />
+                          <img src="images/icon_more-130.png" class="i1" />
+                        </picture>
+                      </div>
+                      <div class="v2 ps17 s15 c3 z6">
+                        <p class="p1 f1">More</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="v2 ps18 s16">
+                <div class="v2 ps3 s17 c3 z12">
+                  <p class="p1 f2">MOONGLAB</p>
+                </div>
+                <div class="v2 ps19 s18 c3 z13">
+                  <svg
+                    viewBox="0 0 52 52"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="i2"
+                  >
+                    <rect width="52" height="52" rx="10" fill="#FFF" />
+                    <rect width="52" height="52" rx="10" />
+                    <path
+                      fill="#FFF"
+                      fill-rule="evenodd"
+                      d="M25.9926 6.6517c-4.9071.0024-9.6533 1.7042-13.39 4.801 -3.7366 3.0968-6.22 7.3866-7.0061 12.1025 -.7861 4.7158.1763 9.5501 2.71528 13.6385 2.5388 4.0884 6.4886 7.1642 11.1432 8.6775 1.0268.1866 1.4136-.4366 1.4136-.9664 0-.5299-.0205-2.0662-.0274-3.7457 -5.7503 1.2163-6.9654-2.376-6.9654-2.376 -.9379-2.3328-2.2933-2.9459-2.2933-2.9459 -1.8758-1.2464.1403-1.223.1403-1.223 2.0777.1433 3.1696 2.0761 3.1696 2.0761 1.8415 3.0758 4.8364 2.1861 6.0138 1.6662 .1849-1.303.7223-2.1894 1.3144-2.6926 -4.5934-.5065-9.4196-2.2328-9.4196-9.944 -.0285-1.9999.7338-3.9339 2.129-5.4019 -.2122-.5066-.9207-2.5527.202-5.3319 0 0 1.7353-.5399 5.6853 2.0627 3.388-.902 6.9626-.902 10.3506 0 3.9465-2.6026 5.6784-2.0627 5.6784-2.0627 1.1261 2.7726.4176 4.8187.2054 5.3319 1.3996 1.4682 2.1635 3.4056 2.1324 5.4085 0 7.728-4.8364 9.4309-9.4367 9.9274 .7393.6265 1.3999 1.8495 1.3999 3.729 0 2.6926-.0239 4.8587-.0239 5.5219 0 .5365.373 1.163 1.4204.9664 4.655-1.5135 8.6052-4.5899 11.1441-8.6789 2.5389-4.0891 3.5008-8.9241 2.7138-13.6404 -.787-4.7163-3.2716-9.0062-7.0094-12.1024 -3.7379-3.0964-8.4852-4.797-13.3929-4.7979h-.0068Z"
+                    />
+                    <g fill="#FFF">
+                      <path
+                        d="M13.1497 35.5473c-.0445.1-.2088.13-.3423.06 -.1335-.07-.2327-.1999-.1848-.3032 .0479-.1033.2088-.13.3423-.06 .1334.07.2361.2033.1848.3032Z"
+                      />
+                      <path
+                        d="M13.9883 36.4571c-.0709.0348-.152.0445-.2294.0274 -.0774-.017-.1463-.0597-.195-.1207 -.1335-.14-.1609-.3333-.0582-.4199 .1027-.0867.2875-.0467.421.0933 .1335.14.1643.3332.0616.4199Z"
+                      />
+                      <path
+                        d="M14.8029 37.6134c-.1267.0867-.3423 0-.4621-.1733 -.0331-.031-.0595-.0683-.0775-.1095 -.018-.0413-.0273-.0856-.0273-.1304 0-.0448.0093-.0891.0273-.1303 .018-.0413.0444-.0785.0775-.1096 .1266-.0833.3423 0 .4621.1699 .1198.17.1232.3966 0 .4832Z"
+                      />
+                      <path
+                        d="M15.9085 38.7332c-.1129.1233-.3423.0899-.5305-.0767 -.1883-.1666-.2328-.3932-.1198-.5132 .1129-.12.3423-.0866.5374.0767 .1951.1632.2327.3932.1129.5132Z"
+                      />
+                      <path
+                        d="M17.459 39.3863c-.0514.1566-.2841.2266-.5169.1599 -.2327-.0666-.3868-.2532-.3423-.4132 .0445-.1599.2807-.2333.5169-.1599 .2362.0733.3868.2499.3423.4132Z"
+                      />
+                      <path
+                        d="M19.15 39.4996c0 .1633-.1916.3033-.4381.3066 -.2464.0033-.4484-.13-.4484-.2933s.1917-.3032.4381-.3065c.2465-.0034.4484.1266.4484.2932Z"
+                      />
+                      <path
+                        d="M20.7243 39.243c.0308.1633-.1403.3333-.3867.3733 -.2465.04-.4621-.0567-.4929-.2166 -.0308-.16.1472-.3333.3868-.3766 .2395-.0433.462.0566.4928.2199Z"
+                      />
+                    </g>
+                  </svg>
+                </div>
+                <div class="v2 ps20 s18 c3 z14">
+                  <svg
+                    viewBox="0 0 52 52"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="i2"
+                  >
+                    <rect width="52" height="52" rx="10" />
+                    <path
+                      fill="#0ACF83"
+                      d="M20.0001 44c3.312 0 6.0001-2.688 6.0001-6v-6.0001h-6.0001C16.6881 31.9999 14 34.688 14 38c0 3.312 2.6881 6 6.0001 6Z"
+                    />
+                    <path
+                      fill="#A259FF"
+                      d="M14 26c0-3.312 2.6881-6.0001 6.0001-6.0001h6.0001v12h-6.0001C16.6881 32.0001 14 29.312 14 26Z"
+                    />
+                    <path
+                      fill="#F24E1E"
+                      d="M14 14c0-3.312 2.6881-6 6.0001-6h6.0001v11.9999h-6.0001C16.6881 19.9999 14 17.312 14 14Z"
+                    />
+                    <path
+                      fill="#FF7262"
+                      d="M26.0002 8h5.9997C35.3119 8 38 10.688 38 14c0 3.312-2.6881 5.9999-6.0001 5.9999h-5.9997V8Z"
+                    />
+                    <path
+                      fill="#1ABCFE"
+                      d="M38 26c0 3.312-2.6881 6-6.0001 6s-6.0001-2.688-6.0001-6 2.6881-6.0001 6.0001-6.0001C35.3119 19.9999 38 22.688 38 26Z"
+                    />
+                  </svg>
+                </div>
+                <div class="v2 ps21 s18 c3 z15">
+                  <svg
+                    viewBox="0 0 52 52"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="i2"
+                  >
+                    <defs>
+                      <radialGradient
+                        id="un3-1"
+                        cx="0"
+                        fr="0%"
+                        fx="0"
+                        fy="0"
+                        gradientUnits="userSpaceOnUse"
+                        cy="0"
+                        r="1"
+                        gradientTransform="translate(0 52) rotate(-45) skewX(-1e-05) scale(73.5391)"
+                      >
+                        <stop offset="0%" stop-color="#FA8F21" />
+                        <stop offset="81.25%" stop-color="#D82D7E" />
+                      </radialGradient>
+                      <radialGradient
+                        id="un3-2"
+                        cx="0"
+                        fr="0%"
+                        fx="0"
+                        fy="0"
+                        gradientUnits="userSpaceOnUse"
+                        cy="0"
+                        r="1"
+                        gradientTransform="translate(3.36539 50.8608) scale(66.0207)"
+                      >
+                        <stop offset="0%" stop-color="#FA8F21" />
+                        <stop offset="78%" stop-color="#D82D7E" />
+                      </radialGradient>
+                    </defs>
+                    <rect width="52" height="52" rx="10" fill="url(#un3-1)" />
+                    <path
+                      fill="url(#un3-2)"
+                      d="M13.1858 51.8161c-3.0924-.1406-4.77233-.6553-5.8897-1.0911 -1.4806-.5765-2.5361-1.2626-3.64728-2.3723 -1.1112-1.1096-1.799-2.1652-2.3723-3.6457C.8406 43.5896.326 41.9097.1854 38.8172c-.1546-3.3428-.1855-4.3458-.1855-12.8149 0-8.4691.034-9.4705.1839-12.8165 .1406-3.0924.6583-4.76924 1.091-5.8897 .57646-1.4806 1.2641-2.5361 2.3722-3.6489 1.1096-1.1097 2.1651-1.799 3.6472-2.3723C8.41152.839 10.0914.3244 13.1839.1838c3.3444-.153 4.3489-.184 12.8149-.184 8.4691 0 9.4706.034 12.8165.1839 3.0925.1406 4.7693.6583 5.8897 1.091 1.4806.5733 2.5361 1.2626 3.6473 2.3722 1.1112 1.1096 1.7958 2.1667 2.3723 3.6472 .4358 1.1173.9505 2.7972 1.0911 5.8897 .153 3.3459.1839 4.3474.1839 12.8165 0 8.466-.0309 9.4705-.1839 12.8164 -.1406 3.0925-.6584 4.7724-1.0911 5.8898 -.5765 1.4805-1.2626 2.5361-2.3723 3.6457 -1.1096 1.1097-2.1667 1.7958-3.6473 2.3723 -1.1173.4358-2.7972.9505-5.8897 1.0911 -3.3428.153-4.3474.1839-12.8165.1839 -8.466 0-9.4705-.0294-12.8134-.1839Z"
+                    />
+                    <path
+                      fill="#FFF"
+                      d="M20.1004 25.8158c0-3.1569 2.5585-5.7168 5.7154-5.7168 3.157 0 5.7169 2.5599 5.7169 5.7168 0 3.157-2.5599 5.7169-5.7169 5.7169 -3.1569 0-5.7154-2.5599-5.7154-5.7169Zm-3.0905 0c0 4.8635 3.9424 8.8059 8.8059 8.8059 4.8635 0 8.8059-3.9424 8.8059-8.8059 0-4.8635-3.9424-8.8059-8.8059-8.8059 -4.8635 0-8.8059 3.9422-8.8059 8.8059Zm15.9027-9.155c-.0002.407.1203.8049.3463 1.1434 .226.3385.5473.6024.9233.7583 .376.156.7897.1969 1.1889.1176 .3993-.0792.766-.2751 1.0539-.5628 .288-.2876.4841-.6542.5637-1.0534 .0795-.3992.0389-.813-.1167-1.1891 -.1556-.376-.4192-.6976-.7575-.9238 -.3384-.2263-.7362-.3471-1.1432-.3473 -.5456.0003-1.0696.217-1.4554.6027 -.3859.3857-.6029.9088-.6033 1.4544ZM18.8876 39.775c-1.672-.0762-2.5808-.3547-3.1847-.5899 -.8007-.3118-1.3719-.683-1.9726-1.2828 -.6006-.5998-.9724-1.1705-1.2827-1.9712 -.2354-.6037-.5139-1.5127-.59-3.1847 -.0831-1.8076-.0997-2.3506-.0997-6.9303 0-4.5796.018-5.1211.0997-6.9303 .0762-1.672.3567-2.5792.59-3.1847 .3117-.8006.6829-1.3719 1.2827-1.9725 .5998-.6007 1.1706-.9725 1.9726-1.2828 .6037-.2354 1.5127-.5139 3.1847-.5899 1.8076-.0832 2.3506-.0998 6.9282-.0998s5.1212.0177 6.9304.1c1.6719.0762 2.5792.3567 3.1846.59 .8007.3103 1.372.6829 1.9726 1.2827 .6006.5998.971 1.1719 1.2827 1.9726 .2355.6036.514 1.5127.59 3.1847 .0831 1.8091.0997 2.3506.0997 6.9303 0 4.5796-.0166 5.1211-.0997 6.9303 -.0762 1.672-.356 2.5807-.59 3.1847 -.3117.8006-.6829 1.3719-1.2827 1.9712 -.5998.5992-1.1719.971-1.9726 1.2827 -.6036.2354-1.5127.514-3.1846.59 -1.8077.0831-2.3507.0997-6.9304.0997 -4.5796 0-5.1211-.0169-6.9282-.1Zm-.142-31.0045c-1.8257.0831-3.0732.3726-4.1626.7965 -1.1276.4378-2.0834 1.0251-3.0379 1.978 -.9544.953-1.5402 1.9089-1.9781 3.0379 -.424 1.0901-.7135 2.3369-.7966 4.1626 -.0846 1.8285-.1039 2.4131-.1039 7.0702 0 4.6572.0193 5.2418.1038 7.0703 .0831 1.8258.3726 3.0724.7965 4.1626 .4378 1.1276 1.0237 2.0853 1.978 3.0378 .9543.9526 1.9089 1.5391 3.0379 1.9781 1.0915.4239 2.3369.7134 4.1626.7965 1.8295.0832 2.4131.1039 7.0702.1039 4.6572 0 5.2418-.0193 7.0703-.1039 1.8258-.0831 3.0724-.3726 4.1626-.7965 1.1276-.439 2.0834-1.0251 3.0378-1.9781 .9545-.9529 1.5391-1.9102 1.9781-3.0378 .4239-1.0902.7148-2.337.7965-4.1626 .0832-1.8299.1025-2.4131.1025-7.0703 0-4.6571-.0193-5.2417-.1025-7.0702 -.0831-1.8258-.3726-3.0732-.7965-4.1626 -.439-1.1276-1.0251-2.0834-1.9781-3.0379 -.9529-.9544-1.9102-1.5402-3.0365-1.9781 -1.0915-.424-2.3383-.7148-4.1625-.7966 -1.8288-.0836-2.4131-.1039-7.0696-.1039s-5.2428.0193-7.0723.1038Z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="v2 ps22 s19 c3 z16">
+                <p class="p1 f3">Technical Graphics Development</p>
+              </div>
+              <div class="v2 ps23 s20 c3 z17">
+                <p class="p1 f2">Technical Graphics Development</p>
+              </div>
+              <div class="v2 ps24 s21 c3 z18">
+                <picture>
+                  <source
+                    srcset="images/overviewimg-360.webp 2x"
+                    type="image/webp"
+                    media="(max-width:479px)"
+                  />
+                  <source
+                    srcset="images/overviewimg-360.jpg 2x"
+                    media="(max-width:479px)"
+                  />
+                  <source
+                    srcset="images/overviewimg-540.webp 2x"
+                    type="image/webp"
+                    media="(max-width:767px)"
+                  />
+                  <source
+                    srcset="images/overviewimg-540.jpg 2x"
+                    media="(max-width:767px)"
+                  />
+                  <source
+                    srcset="images/overviewimg-864.webp 2x"
+                    type="image/webp"
+                    media="(max-width:959px)"
+                  />
+                  <source
+                    srcset="images/overviewimg-864.jpg 2x"
+                    media="(max-width:959px)"
+                  />
+                  <source
+                    srcset="
+                      images/overviewimg-541.webp  1x,
+                      images/overviewimg-1082.webp 2x
+                    "
+                    type="image/webp"
+                    media="(max-width:1199px)"
+                  />
+                  <source
+                    srcset="
+                      images/overviewimg-541.jpg  1x,
+                      images/overviewimg-1082.jpg 2x
+                    "
+                    media="(max-width:1199px)"
+                  />
+                  <source
+                    srcset="
+                      images/overviewimg-676.webp  1x,
+                      images/overviewimg-1352.webp 2x
+                    "
+                    type="image/webp"
+                    media="(max-width:1919px)"
+                  />
+                  <source
+                    srcset="
+                      images/overviewimg-676.jpg  1x,
+                      images/overviewimg-1352.jpg 2x
+                    "
+                    media="(max-width:1919px)"
+                  />
+                  <source
+                    srcset="
+                      images/overviewimg-1081.webp 1x,
+                      images/overviewimg-2162.webp 2x
+                    "
+                    type="image/webp"
+                    media="(min-width:1920px)"
+                  />
+                  <source
+                    srcset="
+                      images/overviewimg-1081.jpg 1x,
+                      images/overviewimg-2162.jpg 2x
+                    "
+                    media="(min-width:1920px)"
+                  />
+                  <img src="images/overviewimg-2162.jpg" class="i3" />
+                </picture>
+              </div>
+              <div class="v2 ps25 s22">
+                <div class="v2 ps3 s23">
+                  <div class="v2 ps3 s24 c3 z19">
+                    <picture>
+                      <source
+                        srcset="images/descriptionimg-360.webp 2x"
+                        type="image/webp"
+                        media="(max-width:479px)"
+                      />
+                      <source
+                        srcset="images/descriptionimg-360.jpg 2x"
+                        media="(max-width:479px)"
+                      />
+                      <source
+                        srcset="images/descriptionimg-540.webp 2x"
+                        type="image/webp"
+                        media="(max-width:767px)"
+                      />
+                      <source
+                        srcset="images/descriptionimg-540.jpg 2x"
+                        media="(max-width:767px)"
+                      />
+                      <source
+                        srcset="images/descriptionimg-864.webp 2x"
+                        type="image/webp"
+                        media="(max-width:959px)"
+                      />
+                      <source
+                        srcset="images/descriptionimg-864.jpg 2x"
+                        media="(max-width:959px)"
+                      />
+                      <source
+                        srcset="
+                          images/descriptionimg-541.webp  1x,
+                          images/descriptionimg-1082.webp 2x
+                        "
+                        type="image/webp"
+                        media="(max-width:1199px)"
+                      />
+                      <source
+                        srcset="
+                          images/descriptionimg-541.jpg  1x,
+                          images/descriptionimg-1082.jpg 2x
+                        "
+                        media="(max-width:1199px)"
+                      />
+                      <source
+                        srcset="
+                          images/descriptionimg-676.webp  1x,
+                          images/descriptionimg-1352.webp 2x
+                        "
+                        type="image/webp"
+                        media="(max-width:1919px)"
+                      />
+                      <source
+                        srcset="
+                          images/descriptionimg-676.jpg  1x,
+                          images/descriptionimg-1352.jpg 2x
+                        "
+                        media="(max-width:1919px)"
+                      />
+                      <source
+                        srcset="
+                          images/descriptionimg-1081.webp 1x,
+                          images/descriptionimg-2162.webp 2x
+                        "
+                        type="image/webp"
+                        media="(min-width:1920px)"
+                      />
+                      <source
+                        srcset="
+                          images/descriptionimg-1081.jpg 1x,
+                          images/descriptionimg-2162.jpg 2x
+                        "
+                        media="(min-width:1920px)"
+                      />
+                      <img src="images/descriptionimg-2162.jpg" class="i4" />
+                    </picture>
+                  </div>
+                  <div class="v2 ps26 s25 c3 z20">
+                    <p class="p2 f4">Everything Can</p>
+                    <p class="p2 f4">You Seen</p>
+                  </div>
+                  <div class="v2 ps27 s26 c3 z21">
+                    <p class="p2 f5">Dolor aute non esse nulla culpa duis </p>
+                    <p class="p2 f5">do anim consectetur ad eu tempor. </p>
+                    <p class="p2 f5">Non consectetur do magna minim </p>
+                    <p class="p2 f5">aliquip deserunt consectetur </p>
+                    <p class="p2 f5">cillum adipiscing culpa.</p>
+                    <p class="p2 f5">Pariatur ex sit aliquip velit</p>
+                    <p class="p2 f5"> cupidatat mollit enim</p>
+                    <p class="p2 f5">tempor excepteur</p>
+                  </div>
+                </div>
+              </div>
+              <div class="v2 ps28 s27 c3 z22">
+                <picture>
+                  <source
+                    srcset="images/rectangle-12-360.webp 2x"
+                    type="image/webp"
+                    media="(max-width:479px)"
+                  />
+                  <source
+                    srcset="images/rectangle-12-360.jpg 2x"
+                    media="(max-width:479px)"
+                  />
+                  <source
+                    srcset="images/rectangle-12-540.webp 2x"
+                    type="image/webp"
+                    media="(max-width:767px)"
+                  />
+                  <source
+                    srcset="images/rectangle-12-540.jpg 2x"
+                    media="(max-width:767px)"
+                  />
+                  <source
+                    srcset="images/rectangle-12-864.webp 2x"
+                    type="image/webp"
+                    media="(max-width:959px)"
+                  />
+                  <source
+                    srcset="images/rectangle-12-864.jpg 2x"
+                    media="(max-width:959px)"
+                  />
+                  <source
+                    srcset="
+                      images/rectangle-12-541.webp  1x,
+                      images/rectangle-12-1082.webp 2x
+                    "
+                    type="image/webp"
+                    media="(max-width:1199px)"
+                  />
+                  <source
+                    srcset="
+                      images/rectangle-12-541.jpg  1x,
+                      images/rectangle-12-1082.jpg 2x
+                    "
+                    media="(max-width:1199px)"
+                  />
+                  <source
+                    srcset="
+                      images/rectangle-12-676.webp  1x,
+                      images/rectangle-12-1352.webp 2x
+                    "
+                    type="image/webp"
+                    media="(max-width:1919px)"
+                  />
+                  <source
+                    srcset="
+                      images/rectangle-12-676.jpg  1x,
+                      images/rectangle-12-1352.jpg 2x
+                    "
+                    media="(max-width:1919px)"
+                  />
+                  <source
+                    srcset="
+                      images/rectangle-12-1081.webp 1x,
+                      images/rectangle-12-2162.webp 2x
+                    "
+                    type="image/webp"
+                    media="(min-width:1920px)"
+                  />
+                  <source
+                    srcset="
+                      images/rectangle-12-1081.jpg 1x,
+                      images/rectangle-12-2162.jpg 2x
+                    "
+                    media="(min-width:1920px)"
+                  />
+                  <img src="images/rectangle-12-2162.jpg" class="i5" />
+                </picture>
+              </div>
+              <div class="v2 ps29 s28 c3 z23">
+                <p class="p1 f6">CG Graphics</p>
+              </div>
+              <div class="v2 ps30 s26 c3 z24">
+                <p class="p1 f7">Dolor aute non esse nulla culpa duis </p>
+                <p class="p1 f7">do anim consectetur ad eu tempor. </p>
+                <p class="p1 f7">Non consectetur do magna minim </p>
+                <p class="p1 f7">aliquip deserunt consectetur </p>
+                <p class="p1 f7">cillum adipiscing culpa.</p>
+                <p class="p1 f7">Pariatur ex sit aliquip velit</p>
+                <p class="p1 f7"> cupidatat mollit enim</p>
+                <p class="p1 f7">tempor excepteur</p>
+              </div>
+              <div class="v2 ps31 s27 c3 z25">
+                <picture>
+                  <source
+                    srcset="images/rectangle-14-360.webp 2x"
+                    type="image/webp"
+                    media="(max-width:479px)"
+                  />
+                  <source
+                    srcset="images/rectangle-14-360.jpg 2x"
+                    media="(max-width:479px)"
+                  />
+                  <source
+                    srcset="images/rectangle-14-540.webp 2x"
+                    type="image/webp"
+                    media="(max-width:767px)"
+                  />
+                  <source
+                    srcset="images/rectangle-14-540.jpg 2x"
+                    media="(max-width:767px)"
+                  />
+                  <source
+                    srcset="images/rectangle-14-864.webp 2x"
+                    type="image/webp"
+                    media="(max-width:959px)"
+                  />
+                  <source
+                    srcset="images/rectangle-14-864.jpg 2x"
+                    media="(max-width:959px)"
+                  />
+                  <source
+                    srcset="
+                      images/rectangle-14-541.webp  1x,
+                      images/rectangle-14-1082.webp 2x
+                    "
+                    type="image/webp"
+                    media="(max-width:1199px)"
+                  />
+                  <source
+                    srcset="
+                      images/rectangle-14-541.jpg  1x,
+                      images/rectangle-14-1082.jpg 2x
+                    "
+                    media="(max-width:1199px)"
+                  />
+                  <source
+                    srcset="
+                      images/rectangle-14-676.webp  1x,
+                      images/rectangle-14-1352.webp 2x
+                    "
+                    type="image/webp"
+                    media="(max-width:1919px)"
+                  />
+                  <source
+                    srcset="
+                      images/rectangle-14-676.jpg  1x,
+                      images/rectangle-14-1352.jpg 2x
+                    "
+                    media="(max-width:1919px)"
+                  />
+                  <source
+                    srcset="
+                      images/rectangle-14-1081.webp 1x,
+                      images/rectangle-14-2162.webp 2x
+                    "
+                    type="image/webp"
+                    media="(min-width:1920px)"
+                  />
+                  <source
+                    srcset="
+                      images/rectangle-14-1081.jpg 1x,
+                      images/rectangle-14-2162.jpg 2x
+                    "
+                    media="(min-width:1920px)"
+                  />
+                  <img src="images/rectangle-14-2162.jpg" class="i5" />
+                </picture>
+              </div>
+              <div class="v2 ps32 s29 c3 z26">
+                <p class="p1 f6">Development</p>
+              </div>
+              <div class="v2 ps33 s26 c3 z27">
+                <p class="p1 f7">Dolor aute non esse nulla culpa duis </p>
+                <p class="p1 f7">do anim consectetur ad eu tempor. </p>
+                <p class="p1 f7">Non consectetur do magna minim </p>
+                <p class="p1 f7">aliquip deserunt consectetur </p>
+                <p class="p1 f7">cillum adipiscing culpa.</p>
+                <p class="p1 f7">Pariatur ex sit aliquip velit</p>
+                <p class="p1 f7"> cupidatat mollit enim</p>
+                <p class="p1 f7">tempor excepteur</p>
+              </div>
+              <div class="v2 ps34 s27 c3 z28">
+                <picture>
+                  <source
+                    srcset="images/rectangle-13-360.webp 2x"
+                    type="image/webp"
+                    media="(max-width:479px)"
+                  />
+                  <source
+                    srcset="images/rectangle-13-360.jpg 2x"
+                    media="(max-width:479px)"
+                  />
+                  <source
+                    srcset="images/rectangle-13-540.webp 2x"
+                    type="image/webp"
+                    media="(max-width:767px)"
+                  />
+                  <source
+                    srcset="images/rectangle-13-540.jpg 2x"
+                    media="(max-width:767px)"
+                  />
+                  <source
+                    srcset="images/rectangle-13-864.webp 2x"
+                    type="image/webp"
+                    media="(max-width:959px)"
+                  />
+                  <source
+                    srcset="images/rectangle-13-864.jpg 2x"
+                    media="(max-width:959px)"
+                  />
+                  <source
+                    srcset="
+                      images/rectangle-13-541.webp  1x,
+                      images/rectangle-13-1082.webp 2x
+                    "
+                    type="image/webp"
+                    media="(max-width:1199px)"
+                  />
+                  <source
+                    srcset="
+                      images/rectangle-13-541.jpg  1x,
+                      images/rectangle-13-1082.jpg 2x
+                    "
+                    media="(max-width:1199px)"
+                  />
+                  <source
+                    srcset="
+                      images/rectangle-13-676.webp  1x,
+                      images/rectangle-13-1352.webp 2x
+                    "
+                    type="image/webp"
+                    media="(max-width:1919px)"
+                  />
+                  <source
+                    srcset="
+                      images/rectangle-13-676.jpg  1x,
+                      images/rectangle-13-1352.jpg 2x
+                    "
+                    media="(max-width:1919px)"
+                  />
+                  <source
+                    srcset="
+                      images/rectangle-13-1081.webp 1x,
+                      images/rectangle-13-2162.webp 2x
+                    "
+                    type="image/webp"
+                    media="(min-width:1920px)"
+                  />
+                  <source
+                    srcset="
+                      images/rectangle-13-1081.jpg 1x,
+                      images/rectangle-13-2162.jpg 2x
+                    "
+                    media="(min-width:1920px)"
+                  />
+                  <img src="images/rectangle-13-2162.jpg" class="i5" />
+                </picture>
+              </div>
+              <div class="v2 ps35 s30 c3 z29">
+                <p class="p1 f6">Resource</p>
+              </div>
+              <div class="v2 ps36 s26 c3 z30">
+                <p class="p1 f7">Dolor aute non esse nulla culpa duis </p>
+                <p class="p1 f7">do anim consectetur ad eu tempor. </p>
+                <p class="p1 f7">Non consectetur do magna minim </p>
+                <p class="p1 f7">aliquip deserunt consectetur </p>
+                <p class="p1 f7">cillum adipiscing culpa.</p>
+                <p class="p1 f7">Pariatur ex sit aliquip velit</p>
+                <p class="p1 f7"> cupidatat mollit enim</p>
+                <p class="p1 f7">tempor excepteur</p>
+              </div>
+            </div>
+            <div class="v2 ps37 s31 c3 z31">
+              <img src="images/area4.svg" class="i6" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="btf c1"></div>
+    <script>
+      var lwi = -1;
+      function thresholdPassed() {
+        var w = document.documentElement.clientWidth;
+        var p = false;
+        var cw = 0;
+        if (w >= 480) {
+          cw++;
+        }
+        if (w >= 768) {
+          cw++;
+        }
+        if (w >= 960) {
+          cw++;
+        }
+        if (w >= 1200) {
+          cw++;
+        }
+        if (w >= 1920) {
+          cw++;
+        }
+        if (lwi != cw) {
+          p = true;
+        }
+        lwi = cw;
+        return p;
+      }
+      !(function () {
+        if ("Promise" in window && void 0 !== window.performance) {
+          var e,
+            t,
+            r = document,
+            n = function () {
+              return r.createElement("link");
+            },
+            o = new Set(),
+            a = n(),
+            i =
+              a.relList && a.relList.supports && a.relList.supports("prefetch"),
+            s = location.href.replace(/#[^#]+$/, "");
+          o.add(s);
+          var c = function (e) {
+              var t = location,
+                r = "http:",
+                n = "https:";
+              if (
+                e &&
+                e.href &&
+                e.origin == t.origin &&
+                [r, n].includes(e.protocol) &&
+                (e.protocol != r || t.protocol != n)
+              ) {
+                var o = e.pathname;
+                if (
+                  !(
+                    (e.hash && o + e.search == t.pathname + t.search) ||
+                    "?preload=no" == e.search.substr(-11) ||
+                    (".html" != o.substr(-5) &&
+                      ".html" != o.substr(-5) &&
+                      "/" != o.substr(-1))
+                  )
+                )
+                  return !0;
+              }
+            },
+            u = function (e) {
+              var t = e.replace(/#[^#]+$/, "");
+              if (!o.has(t)) {
+                if (i) {
+                  var a = n();
+                  (a.rel = "prefetch"), (a.href = t), r.head.appendChild(a);
+                } else {
+                  var s = new XMLHttpRequest();
+                  s.open("GET", t, (s.withCredentials = !0)), s.send();
+                }
+                o.add(t);
+              }
+            },
+            p = function (e) {
+              return e.target.closest("a");
+            },
+            f = function (t) {
+              var r = t.relatedTarget;
+              (r && p(t) == r.closest("a")) ||
+                (e && (clearTimeout(e), (e = void 0)));
+            },
+            d = { capture: !0, passive: !0 };
+          r.addEventListener(
+            "touchstart",
+            function (e) {
+              t = performance.now();
+              var r = p(e);
+              c(r) && u(r.href);
+            },
+            d
+          ),
+            r.addEventListener(
+              "mouseover",
+              function (r) {
+                if (!(performance.now() - t < 1200)) {
+                  var n = p(r);
+                  c(n) &&
+                    (n.addEventListener("mouseout", f, { passive: !0 }),
+                    (e = setTimeout(function () {
+                      u(n.href), (e = void 0);
+                    }, 80)));
+                }
+              },
+              d
+            );
+        }
+      })();
+      dpth = "/";
+      !(function () {
+        var e = {},
+          t = {},
+          n = {};
+        window.ld = function (a, r, o) {
+          var c = function () {
+              "interactive" == document.readyState
+                ? (r && r(),
+                  document.addEventListener("readystatechange", function () {
+                    "complete" == document.readyState && o && o();
+                  }))
+                : "complete" == document.readyState
+                ? (r && r(), o && o())
+                : document.addEventListener("readystatechange", function () {
+                    "interactive" == document.readyState && r && r(),
+                      "complete" == document.readyState && o && o();
+                  });
+            },
+            d = (1 << a.length) - 1,
+            u = 0,
+            i = function (r) {
+              var o = a[r],
+                i = function () {
+                  for (var t = 0; t < a.length; t++) {
+                    var r = (1 << t) - 1;
+                    if ((u & r) == r && n[a[t]]) {
+                      if (!e[a[t]]) {
+                        var o = document.createElement("script");
+                        (o.textContent = n[a[t]]),
+                          document.body.appendChild(o),
+                          (e[a[t]] = !0);
+                      }
+                      if ((u |= 1 << t) == d) return c(), 0;
+                    }
+                  }
+                  return 1;
+                };
+              if (null == t[o]) {
+                t[o] = [];
+                var f = new XMLHttpRequest();
+                f.open("GET", o, !0),
+                  (f.onload = function () {
+                    (n[o] = f.responseText),
+                      [].forEach.call(t[o], function (e) {
+                        e();
+                      });
+                  }),
+                  t[o].push(i),
+                  f.send();
+              } else {
+                if (e[o]) return i();
+                t[o].push(i);
+              }
+              return 1;
+            };
+          if (a.length) for (var f = 0; f < a.length && i(f); f++);
+          else c();
+        };
+      })();
+      ld([], function () {
+        if (location.hash) {
+          var e = location.hash.replace("#", ""),
+            o = function () {
+              var t = document.querySelectorAll('[name="' + e + '"]')[0];
+              t && t.scrollIntoView(),
+                "0px" ===
+                  window
+                    .getComputedStyle(document.body)
+                    .getPropertyValue("min-width") && setTimeout(o, 100);
+            };
+          o();
+        }
+      });
+    </script>
+  </body>
+</html>

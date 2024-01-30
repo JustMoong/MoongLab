@@ -6,8 +6,11 @@ function App() {
     <div className="App">
       <h1>Moonglab</h1>
       <div className="App-header">
-        <span></span>
-        </div>
+        Enhance CG Workflow
+      </div>
+      <div className="App-body">
+        some content
+      </div>
     </div>
   );
 }

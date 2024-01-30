@@ -1,5 +1,32 @@
+@font-face {
+  font-family: 'Pretendard';
+  src: url('../Fonts/Pretendard-Black.otf') format('opentype'),
+       url('../Fonts/Pretendard-Bold.otf') format('opentype'),
+       url('../Fonts/Pretendard-ExtraBold.otf') format('opentype'),
+       url('../Fonts/Pretendard-SemiBold.otf') format('opentype'),
+       url('../Fonts/Pretendard-Regular.otf') format('opentype'),
+       url('../Fonts/Pretendard-Light.otf') format('opentype'),
+       url('../Fonts/Pretendard-ExtraLight.otf') format('opentype'),
+       url('../Fonts/Pretendard-Medium.otf') format('opentype');
+       
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  width: fill-available;
+  scroll-behavior: smooth;
+  background-color: #161619;
+  display: flex;
+  justify-content: center;
+}
+
 .App {
   text-align: center;
+  flex-direction: column;
+  color: white;
+  align-items: center;
+  display: flex;
 }
 
 .App-logo {
@@ -14,13 +41,21 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  width: fill-available;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: top;
+  font-size: 32px;
+  color: white;
+}
+
+.App-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
+  font-size: 16px;
   color: white;
 }
 

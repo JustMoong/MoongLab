@@ -1,9 +1,9 @@
-<script>
-	export let name;
+<script lang="ts">
+	export let WebGreetMsg : String = 'world';
 </script>
 
 <main>
-	<h1>Hello {name}!</h1>
+	<h1>Hello {WebGreetMsg}</h1>
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
 </main>
 
@@ -16,7 +16,6 @@
 	}
 
 	h1 {
-		color: #ff3e00;
 		text-transform: uppercase;
 		font-size: 4em;
 		font-weight: 100;

@@ -17,5 +17,6 @@ export let ButtonText : any = "Placeholder";
     background: var(--Accent-Blue-Deep, #007AFF);
     border: none;
     font-size: 14px;
+    color: white;
 }
 </style>

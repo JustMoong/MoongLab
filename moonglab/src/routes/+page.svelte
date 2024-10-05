@@ -3,7 +3,7 @@
 </style>
 
 <h1>Playground Laboratory</h1>
-<p></p>
+<p class="2col"></p>
 
 <script>
     

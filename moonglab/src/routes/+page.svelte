@@ -3,9 +3,14 @@
 </style>
 
 <h1>Playground Laboratory</h1>
-<p class="2col"></p>
+<div class="2col">
+    <UIHeader title="Playground Laboratory" />
+</div>
+
+
 
 <script>
+    import UIHeader from './components/UIHeader.svelte';
     
 </script>
 

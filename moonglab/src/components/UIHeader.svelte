@@ -6,7 +6,12 @@
 <style>
     .header {
         text-align: center;
+        padding: 16px;
         margin: 20px;
+        display: inline-block;
+        border: 2px solid black;
+        border-radius: 8px;
+        box-sizing: border-box;
     }
     .link {
         font-size: 24px;

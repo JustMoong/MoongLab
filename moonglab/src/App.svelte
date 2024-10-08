@@ -7,15 +7,19 @@
 <main>
 	<h1>Hello {name}!</h1>
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+	<UIHeader/>
 </main>
-<UIHeader/>
+
 
 
 <style>
+
 	main {
+		align-content: center;
+		box-sizing: border-box;
 		text-align: center;
+		align-items: center;
 		padding: 1em;
-		max-width: 240px;
 		margin: 0 auto;
 	}
 

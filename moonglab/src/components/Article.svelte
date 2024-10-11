@@ -1,17 +1,17 @@
 <script>
-    export let title = "Visit Apple";
-    export let description = "Click the link above to visit Apple.com for more information.";
+    export let title = "Title Area";
+    export let description = "Description Area.";
+    export let link = "";
 </script>
 
 <style>
     .header {
-        text-align: center;
-        padding: 16px;
-        margin: 20px;
+        background-color: white;
+        margin: 8px;
         display: inline-block;
-        border: 2px solid black;
-        border-radius: 8px;
-        box-sizing: border-box;
+        border-radius: 16px;
+        width: 440px;
+        height: 120px;
     }
     .link {
         font-size: 24px;
@@ -19,13 +19,15 @@
         text-decoration: none;
     }
     .description {
-        margin-top: 10px;
+
         font-size: 16px;
         color: gray;
     }
 </style>
 
+<a href={link}>
 <div class="header">
-    <a class="link" href="https://www.apple.com" target="_blank" rel="noopener noreferrer">{title}</a>
+    <p class="link">{title}</p>
     <p class="description">{description}</p>
 </div>
+</a>

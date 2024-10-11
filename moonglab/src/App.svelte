@@ -1,33 +1,62 @@
 <script>
-  import Article from "./components/UIHeader.svelte";
+  import Article from "./components/Article.svelte";
 
-	export let name;
+	
 </script>
 
+
 <main>
-	<h1>Hello {name}!</h1>
+	<h1>Moonglab</h1>
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-	<Article/>
+	<div class="row">
+	<ol>
+		<ul><Article link="https://apple.com"/></ul>
+		<ul><Article link="https://apple.com"/></ul>
+		<ul><Article link="https://apple.com"/></ul>
+		<ul><Article link="https://apple.com"/></ul>
+	</ol>
+	<ol>
+		<ul><Article link="https://apple.com"/></ul>
+		<ul><Article link="https://apple.com"/></ul>
+		<ul><Article link="https://apple.com"/></ul>
+		<ul><Article link="https://apple.com"/></ul>
+	</ol>
+</div>
 </main>
 
 
 
 <style>
-
+    /* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700&display=swap'); */
 	main {
-		align-content: center;
+		
 		box-sizing: border-box;
 		text-align: center;
 		align-items: center;
-		padding: 1em;
-		margin: 0 auto;
 	}
 
 	h1 {
-		color: #ff3e00;
+		/* color: #ff3e00; */
+		font-weight: 500;
+		font-size: 72px;
 		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
+	}
+
+	ol {
+		padding-inline-start: 0px;
+	}
+	.row
+	{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		/* align-items: center; */
+	}
+
+	.row ul {
+		margin: 0 4px; /* 리스트 항목 간의 간격을 좁히기 위해 추가 */
+		padding: 0;
+		gap: 0;
 	}
 
 	@media (min-width: 640px) {

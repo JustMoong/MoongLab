@@ -1,7 +1,8 @@
 <script>
     export let title = "Title Area";
     export let description = "Description Area.";
-    export let link = "";
+    export let link = "/";
+
 </script>
 
 <style>

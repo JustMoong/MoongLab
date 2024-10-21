@@ -1,7 +1,5 @@
 <script>
-  import Article from "./components/Article.svelte";
-
-	
+  	import Article from "./components/Article.svelte";
 </script>
 
 
@@ -10,7 +8,7 @@
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
 	<div class="row">
 	<ol>
-		<ul><Article link="https://apple.com"/></ul>
+		<ul><Article link="moonglab/src/routes/CompoundInterestCalculator.svelte"/></ul>
 		<ul><Article link="https://apple.com"/></ul>
 		<ul><Article link="https://apple.com"/></ul>
 		<ul><Article link="https://apple.com"/></ul>
@@ -27,7 +25,6 @@
 
 
 <style>
-    /* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700&display=swap'); */
 	main {
 		
 		box-sizing: border-box;
@@ -54,7 +51,7 @@
 	}
 
 	.row ul {
-		margin: 0 4px; /* 리스트 항목 간의 간격을 좁히기 위해 추가 */
+		margin: 0 4px; 
 		padding: 0;
 		gap: 0;
 	}
